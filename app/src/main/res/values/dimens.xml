@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Malunggay design system — spacing scale (4dp grid). -->
+    <dimen name="space_xs">4dp</dimen>
+    <dimen name="space_sm">8dp</dimen>
+    <dimen name="space_md">12dp</dimen>
+    <dimen name="space_lg">16dp</dimen>
+    <dimen name="space_xl">24dp</dimen>
+    <dimen name="space_2xl">32dp</dimen>
+    <dimen name="space_3xl">48dp</dimen>
+
+    <!-- Screen layout -->
+    <dimen name="screen_padding">20dp</dimen>
+
+    <!-- Shape -->
+    <dimen name="radius_input">12dp</dimen>
+    <dimen name="radius_button">12dp</dimen>
+    <dimen name="radius_card">20dp</dimen>
+    <dimen name="radius_banner">12dp</dimen>
+    <dimen name="radius_sheet">28dp</dimen>
+
+    <!-- Components (flat design: no shadows) -->
+    <dimen name="button_height">56dp</dimen>
+    <dimen name="card_elevation">0dp</dimen>
+    <dimen name="icon_sm">20dp</dimen>
+    <dimen name="logo_badge">72dp</dimen>
+    <dimen name="logo_icon">40dp</dimen>
+
+    <!-- Login header -->
+    <dimen name="login_header_padding_top">40dp</dimen>
+    <dimen name="login_header_padding_bottom">64dp</dimen>
+    <dimen name="login_sheet_overlap">-28dp</dimen>
+</resources>

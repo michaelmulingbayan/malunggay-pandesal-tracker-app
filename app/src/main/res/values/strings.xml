@@ -1,3 +1,28 @@
 <resources>
     <string name="app_name">Malunggay Tracker App</string>
+
+    <!-- Brand -->
+    <string name="brand_name">Malunggay Tracker</string>
+    <string name="brand_tagline">Pandesal production &amp; delivery, in one place</string>
+
+    <!-- Login -->
+    <string name="login_title">Welcome back</string>
+    <string name="login_subtitle">Sign in with your account to continue.</string>
+    <string name="login_email">Email address</string>
+    <string name="login_password">Password</string>
+    <string name="login_button">Sign in</string>
+    <string name="login_signing_in">Signing in…</string>
+    <string name="login_help">Having trouble signing in? Contact your administrator.</string>
+    <string name="login_version">Version %1$s</string>
+    <string name="error_email_required">Enter your email address</string>
+    <string name="error_email_invalid">Enter a valid email address</string>
+    <string name="error_password_required">Enter your password</string>
+    <string name="error_network">Can\'t reach the server. Check your connection and try again.</string>
+    <string name="error_too_many_attempts">Too many sign-in attempts. Please wait a minute and try again.</string>
+    <string name="error_unexpected">Something went wrong. Please try again.</string>
+
+    <!-- Home -->
+    <string name="home_welcome">Welcome, %1$s</string>
+    <string name="home_logout">Log out</string>
+    <string name="home_session_expired">Your session has expired. Please sign in again.</string>
 </resources>
