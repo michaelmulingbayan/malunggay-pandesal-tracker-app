@@ -10,11 +10,10 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
-object ApiClient {
+/** One Retrofit instance (and connection pool) shared by every API interface. */
+class ApiClient(tokenStore: TokenStore) {
 
-    fun createAuthApi(tokenStore: TokenStore): AuthApi = createRetrofit(tokenStore).create(AuthApi::class.java)
-
-    private fun createRetrofit(tokenStore: TokenStore): Retrofit {
+    private val retrofit: Retrofit = run {
         val client = OkHttpClient.Builder()
             .addInterceptor(AuthInterceptor(tokenStore))
             .apply {
@@ -27,12 +26,15 @@ object ApiClient {
             .readTimeout(30, TimeUnit.SECONDS)
             .build()
 
-        return Retrofit.Builder()
+        Retrofit.Builder()
             .baseUrl(BuildConfig.API_BASE_URL)
             .client(client)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
     }
+
+    val authApi: AuthApi = retrofit.create(AuthApi::class.java)
+    val riderApi: RiderApi = retrofit.create(RiderApi::class.java)
 }
 
 /**

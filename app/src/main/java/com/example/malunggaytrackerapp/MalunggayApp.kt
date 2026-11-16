@@ -2,6 +2,7 @@ package com.example.malunggaytrackerapp
 
 import android.app.Application
 import com.example.malunggaytrackerapp.data.AuthRepository
+import com.example.malunggaytrackerapp.data.RiderRepository
 import com.example.malunggaytrackerapp.data.local.TokenStore
 import com.example.malunggaytrackerapp.data.remote.ApiClient
 
@@ -13,10 +14,14 @@ class MalunggayApp : Application() {
     lateinit var authRepository: AuthRepository
         private set
 
+    lateinit var riderRepository: RiderRepository
+        private set
+
     override fun onCreate() {
         super.onCreate()
         val tokenStore = TokenStore(this)
-        val authApi = ApiClient.createAuthApi(tokenStore)
-        authRepository = AuthRepository(authApi, tokenStore)
+        val apiClient = ApiClient(tokenStore)
+        authRepository = AuthRepository(apiClient.authApi, tokenStore)
+        riderRepository = RiderRepository(apiClient.riderApi)
     }
 }

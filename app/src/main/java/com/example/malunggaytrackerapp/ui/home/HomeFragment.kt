@@ -11,6 +11,7 @@ import androidx.lifecycle.repeatOnLifecycle
 import com.example.malunggaytrackerapp.R
 import com.example.malunggaytrackerapp.data.remote.UserDto
 import com.example.malunggaytrackerapp.databinding.FragmentHomeBinding
+import com.example.malunggaytrackerapp.ui.common.initialsOf
 import com.example.malunggaytrackerapp.ui.common.padTopForStatusBar
 import kotlinx.coroutines.launch
 
@@ -46,17 +47,10 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     }
 
     private fun showUser(binding: FragmentHomeBinding, user: UserDto) {
-        binding.avatarText.text = initials(user.name)
+        binding.avatarText.text = initialsOf(user.name)
         binding.welcomeText.text = getString(R.string.home_welcome, user.name.substringBefore(' '))
         binding.emailText.text = user.email
         binding.roleText.text = user.role.replaceFirstChar { it.uppercase() }
         binding.roleText.isVisible = true
     }
-
-    private fun initials(name: String): String =
-        name.split(' ')
-            .filter { it.isNotBlank() }
-            .take(2)
-            .joinToString("") { it.first().uppercase() }
-            .ifEmpty { "?" }
 }

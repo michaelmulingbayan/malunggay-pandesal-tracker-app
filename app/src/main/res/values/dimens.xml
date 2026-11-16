@@ -25,6 +25,8 @@
     <dimen name="icon_sm">20dp</dimen>
     <dimen name="logo_badge">72dp</dimen>
     <dimen name="logo_icon">40dp</dimen>
+    <!-- List divider starts after the avatar: screen_padding (20) + avatar (44) + gap (16). -->
+    <dimen name="rider_divider_inset">80dp</dimen>
 
     <!-- Login header -->
     <dimen name="login_header_padding_top">40dp</dimen>

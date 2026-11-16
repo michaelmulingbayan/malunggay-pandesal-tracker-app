@@ -15,6 +15,7 @@ import com.example.malunggaytrackerapp.BuildConfig
 import com.example.malunggaytrackerapp.R
 import com.example.malunggaytrackerapp.databinding.ActivityLoginBinding
 import com.example.malunggaytrackerapp.ui.common.LocalNetworkAccess
+import com.example.malunggaytrackerapp.ui.common.asString
 import com.example.malunggaytrackerapp.ui.common.setupBrandedEdgeToEdge
 import com.example.malunggaytrackerapp.ui.home.HomeActivity
 import kotlinx.coroutines.launch
@@ -94,9 +95,4 @@ class LoginActivity : AppCompatActivity() {
             Intent(context, LoginActivity::class.java)
                 .addFlags(Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
     }
-}
-
-fun UiText.asString(context: Context): String = when (this) {
-    is UiText.Resource -> context.getString(id)
-    is UiText.Raw -> text
 }

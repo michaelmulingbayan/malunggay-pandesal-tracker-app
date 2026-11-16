@@ -44,4 +44,35 @@
     <string name="section_reports_subtitle">Insights &amp; summaries</string>
     <string name="section_reports_empty">Production, sales and returns reports will appear here.</string>
     <string name="section_coming_soon">Coming soon</string>
+
+    <!-- Riders list -->
+    <string name="riders_add">Add rider</string>
+    <string name="riders_empty_title">No riders yet</string>
+    <string name="riders_empty_body">Tap + to add your first rider.</string>
+    <string name="riders_toggle_description">%1$s account active</string>
+    <string name="riders_activated">%1$s can now sign in</string>
+    <string name="riders_deactivated">%1$s was deactivated and signed out</string>
+    <string name="riders_added">Rider added</string>
+    <string name="riders_count">%1$d active of %2$d</string>
+
+    <!-- Add rider -->
+    <string name="add_rider_title">Add rider</string>
+    <string name="add_rider_subtitle">Create a sign-in account for your rider</string>
+    <string name="add_rider_section_account">Account</string>
+    <string name="add_rider_section_contact">Contact</string>
+    <string name="add_rider_name">Full name</string>
+    <string name="add_rider_email">Email address</string>
+    <string name="add_rider_password">Temporary password</string>
+    <string name="add_rider_password_helper">At least 8 characters. Share it with the rider so they can sign in.</string>
+    <string name="add_rider_phone">Mobile number</string>
+    <string name="add_rider_address">Address</string>
+    <string name="add_rider_save">Save rider</string>
+    <string name="add_rider_saving">Saving…</string>
+    <string name="back">Back</string>
+    <string name="error_name_required">Enter the rider\'s name</string>
+    <string name="error_password_min">Use at least 8 characters</string>
+    <string name="error_phone_required">Enter a mobile number</string>
+    <string name="error_address_required">Enter an address</string>
+    <string name="error_forbidden">You don\'t have permission to do that.</string>
+    <string name="error_too_many_requests">Too many requests. Please wait a moment and try again.</string>
 </resources>

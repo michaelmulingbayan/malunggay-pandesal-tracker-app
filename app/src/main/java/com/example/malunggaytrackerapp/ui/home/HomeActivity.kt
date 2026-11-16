@@ -21,6 +21,7 @@ import com.example.malunggaytrackerapp.databinding.ActivityHomeBinding
 import com.example.malunggaytrackerapp.ui.common.LocalNetworkAccess
 import com.example.malunggaytrackerapp.ui.common.enableBrandedEdgeToEdge
 import com.example.malunggaytrackerapp.ui.login.LoginActivity
+import com.example.malunggaytrackerapp.ui.riders.RidersFragment
 import kotlinx.coroutines.launch
 
 /**
@@ -111,9 +112,7 @@ class HomeActivity : AppCompatActivity() {
         R.id.nav_stock -> SectionFragment.newInstance(
             R.string.nav_stock, R.string.section_stock_subtitle, R.string.section_stock_empty, R.drawable.ic_nav_stock,
         )
-        R.id.nav_riders -> SectionFragment.newInstance(
-            R.string.nav_riders, R.string.section_riders_subtitle, R.string.section_riders_empty, R.drawable.ic_nav_riders,
-        )
+        R.id.nav_riders -> RidersFragment()
         R.id.nav_sales -> SectionFragment.newInstance(
             R.string.nav_sales, R.string.section_sales_subtitle, R.string.section_sales_empty, R.drawable.ic_nav_sales,
         )

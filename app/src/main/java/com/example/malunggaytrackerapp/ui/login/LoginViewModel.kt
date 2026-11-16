@@ -1,7 +1,6 @@
 package com.example.malunggaytrackerapp.ui.login
 
 import android.util.Patterns
-import androidx.annotation.StringRes
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider.AndroidViewModelFactory.Companion.APPLICATION_KEY
 import androidx.lifecycle.viewModelScope
@@ -11,17 +10,12 @@ import com.example.malunggaytrackerapp.MalunggayApp
 import com.example.malunggaytrackerapp.R
 import com.example.malunggaytrackerapp.data.ApiResult
 import com.example.malunggaytrackerapp.data.AuthRepository
+import com.example.malunggaytrackerapp.ui.common.UiText
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-
-/** A message is either a string resource (local text) or raw text from the server. */
-sealed interface UiText {
-    data class Resource(@StringRes val id: Int) : UiText
-    data class Raw(val text: String) : UiText
-}
 
 data class LoginUiState(
     val isLoading: Boolean = false,
