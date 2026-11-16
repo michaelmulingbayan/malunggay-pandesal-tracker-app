@@ -75,4 +75,148 @@
     <string name="error_address_required">Enter an address</string>
     <string name="error_forbidden">You don\'t have permission to do that.</string>
     <string name="error_too_many_requests">Too many requests. Please wait a moment and try again.</string>
+
+    <!-- Admin dashboard -->
+    <string name="dashboard_today">Today</string>
+    <string name="dashboard_sales_label">Total sales today</string>
+    <string name="dashboard_pieces_sold">%1$s pcs sold</string>
+    <string name="dashboard_produced">Produced</string>
+    <string name="dashboard_available">Available</string>
+    <string name="dashboard_distributed">Distributed</string>
+    <string name="dashboard_active_riders">Active riders</string>
+    <string name="dashboard_actions">Actions</string>
+    <string name="dashboard_map_title">Rider locations</string>
+    <string name="dashboard_map_placeholder">Map preview coming soon</string>
+    <string name="dashboard_map_body">Live rider locations will show here.</string>
+    <string name="greeting_morning">Good morning,</string>
+    <string name="greeting_afternoon">Good afternoon,</string>
+    <string name="greeting_evening">Good evening,</string>
+    <string name="dashboard_record_body">Log today\'s batch</string>
+    <string name="dashboard_distribute_body">Assign to riders</string>
+    <string name="dashboard_of_produced">%1$d%% of produced</string>
+
+    <!-- Home quick actions -->
+    <string name="home_quick_actions">Quick actions</string>
+    <string name="home_record_production">Record production</string>
+    <string name="home_record_production_body">Log today\'s pandesal output</string>
+
+    <!-- Dates -->
+    <string name="date_today">Today</string>
+    <string name="date_yesterday">Yesterday</string>
+    <plurals name="date_days_ago">
+        <item quantity="one">%d day ago</item>
+        <item quantity="other">%d days ago</item>
+    </plurals>
+
+    <!-- Production -->
+    <string name="production_title">Production</string>
+    <string name="production_section_today">Today\'s production</string>
+    <string name="production_today_summary">%1$s pcs recorded today</string>
+    <plurals name="production_batches">
+        <item quantity="one">%d batch</item>
+        <item quantity="other">%d batches</item>
+    </plurals>
+    <string name="production_quantity">Pieces produced</string>
+    <string name="production_pcs">pcs</string>
+    <string name="production_remarks">Remarks (optional)</string>
+    <string name="production_remarks_helper">e.g. Morning batch, oven issue, extra order</string>
+    <string name="production_save">Record production</string>
+    <string name="production_saving">Recording…</string>
+    <string name="production_saved">Recorded %1$s pcs for today</string>
+    <string name="production_section_history">History</string>
+    <string name="production_history_empty">No production recorded yet.</string>
+    <string name="production_recorded_by">%1$s · by %2$s</string>
+    <string name="production_item_description">%1$s, %2$s pieces</string>
+    <string name="error_quantity_required">Enter how many pieces were produced</string>
+    <string name="error_quantity_invalid">Enter a whole number greater than 0</string>
+
+    <!-- Distribute stock -->
+    <string name="home_distribute_stock">Distribute stock</string>
+    <string name="home_distribute_stock_body">Assign today\'s pandesal to riders</string>
+    <string name="distribute_title">Distribute stock</string>
+    <string name="distribute_available_label">Available to distribute</string>
+    <string name="distribute_available_value">%1$s pcs</string>
+    <string name="distribute_available_detail">%1$s produced · %2$s assigned</string>
+    <string name="distribute_none_produced">No production recorded today yet</string>
+    <string name="distribute_section_assign">Assign to rider</string>
+    <string name="distribute_rider">Rider</string>
+    <string name="distribute_no_riders">No active riders. Add or activate one in Riders.</string>
+    <string name="distribute_quantity">Quantity</string>
+    <string name="distribute_assign">Assign stock</string>
+    <string name="distribute_assigning">Assigning…</string>
+    <string name="distribute_assigned">Assigned %1$s pcs to %2$s</string>
+    <string name="distribute_section_today">Assigned today</string>
+    <string name="distribute_today_empty">Nothing assigned yet today.</string>
+    <plurals name="distribute_assignment_count">
+        <item quantity="one">%d assignment</item>
+        <item quantity="other">%d assignments</item>
+    </plurals>
+    <string name="distribute_row_detail">%1$s · last at %2$s</string>
+    <string name="distribute_row_description">%1$s, %2$s pieces</string>
+    <string name="error_rider_required">Choose a rider</string>
+    <string name="error_quantity_exceeds">Only %1$s pcs are available</string>
+    <string name="error_nothing_available">Nothing left to distribute. Record production first.</string>
+
+    <!-- Inventory -->
+    <string name="inventory_title">Inventory</string>
+    <string name="inventory_section_today">Today\'s stock flow</string>
+    <string name="inventory_bar_produced">Produced</string>
+    <string name="inventory_bar_distributed">Distributed</string>
+    <string name="inventory_bar_returned">Returned</string>
+    <string name="inventory_pcs">%1$s pcs</string>
+    <string name="inventory_note_undistributed">%1$s pcs not yet distributed</string>
+    <string name="inventory_produced_label">pcs produced today</string>
+    <string name="inventory_percent_sold">%1$d%% sold</string>
+    <string name="inventory_percent">%1$d%%</string>
+    <string name="inventory_legend_produced">Production</string>
+    <string name="inventory_legend_sold">Sold</string>
+    <string name="inventory_legend_returned">Returned</string>
+    <string name="inventory_flow_description">%1$s pieces produced, %2$s sold, %3$s returned.</string>
+    <string name="inventory_note_pending">%1$s pcs waiting for verification</string>
+    <string name="inventory_note_all_clear">All returns verified</string>
+    <string name="inventory_section_returns">Returned stock</string>
+    <string name="inventory_returns_empty">No returns yet. Returns from riders will appear here for you to verify.</string>
+    <string name="inventory_return_detail">%1$s of %2$s pcs · %3$s</string>
+    <string name="inventory_verify">Verify</string>
+    <string name="inventory_verified">Verified</string>
+    <string name="inventory_rejected">Rejected</string>
+    <string name="inventory_verify_title">Verify return?</string>
+    <string name="inventory_verify_message">Confirm you received %1$s pcs back from %2$s.</string>
+    <string name="inventory_verify_done">Verified %1$s pcs from %2$s</string>
+    <string name="inventory_return_description">%1$s returned %2$s pieces, %3$s</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- Sales -->
+    <string name="sales_title">Sales</string>
+    <string name="sales_total_label">Total sales today</string>
+    <string name="sales_pieces_label">Pieces sold</string>
+    <string name="sales_riders_label">Riders</string>
+    <string name="sales_section_riders">Sales per rider</string>
+    <string name="sales_empty">No sales recorded today yet. Sales from riders will appear here.</string>
+    <string name="sales_rider_detail">%1$s pcs · %2$s</string>
+    <plurals name="sales_count">
+        <item quantity="one">%d sale</item>
+        <item quantity="other">%d sales</item>
+    </plurals>
+    <string name="sales_rider_description">%1$s sold %2$s pieces for %3$s</string>
+    <string name="sales_share">%1$d%% of total</string>
+
+    <!-- Price per piece -->
+    <string name="price_label">Price per piece</string>
+    <string name="price_value">%1$s / pc</string>
+    <string name="price_not_set">Not set</string>
+    <string name="price_not_set_detail">Set a price so riders can record sales</string>
+    <string name="price_set_detail">Set by %1$s · %2$s</string>
+    <string name="price_change">Change</string>
+    <string name="price_set">Set price</string>
+    <string name="price_dialog_title">Price per piece</string>
+    <string name="price_dialog_hint">Price</string>
+    <string name="price_dialog_helper">Applies to new sales. Past sales keep their price.</string>
+    <string name="price_currency_prefix">₱</string>
+    <string name="price_per_pc_suffix">/ pc</string>
+    <string name="price_save">Save</string>
+    <string name="price_saved">Price set to %1$s per piece</string>
+    <string name="price_error_required">Enter a price</string>
+    <string name="price_error_invalid">Enter a price greater than ₱0</string>
+    <string name="price_error_decimals">Use at most 2 decimals, e.g. 3.50</string>
 </resources>

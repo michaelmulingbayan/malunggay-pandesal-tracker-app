@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Round white action button sitting on the emerald header (e.g. "+ Add rider"). -->
+<!-- Round emerald action button in the header (e.g. "+ Add rider"). -->
 <ripple xmlns:android="http://schemas.android.com/apk/res/android"
-    android:color="?attr/colorPrimaryContainer">
+    android:color="#33FFFFFF">
     <item>
         <shape android:shape="oval">
-            <solid android:color="?attr/colorSurface" />
+            <solid android:color="?attr/colorPrimary" />
         </shape>
     </item>
 </ripple>

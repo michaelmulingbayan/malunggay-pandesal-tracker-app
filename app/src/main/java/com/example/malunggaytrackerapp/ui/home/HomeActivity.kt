@@ -20,8 +20,10 @@ import com.example.malunggaytrackerapp.R
 import com.example.malunggaytrackerapp.databinding.ActivityHomeBinding
 import com.example.malunggaytrackerapp.ui.common.LocalNetworkAccess
 import com.example.malunggaytrackerapp.ui.common.enableBrandedEdgeToEdge
+import com.example.malunggaytrackerapp.ui.inventory.InventoryFragment
 import com.example.malunggaytrackerapp.ui.login.LoginActivity
 import com.example.malunggaytrackerapp.ui.riders.RidersFragment
+import com.example.malunggaytrackerapp.ui.sales.SalesFragment
 import kotlinx.coroutines.launch
 
 /**
@@ -109,13 +111,9 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun createTab(@IdRes tabId: Int): Fragment = when (tabId) {
-        R.id.nav_stock -> SectionFragment.newInstance(
-            R.string.nav_stock, R.string.section_stock_subtitle, R.string.section_stock_empty, R.drawable.ic_nav_stock,
-        )
+        R.id.nav_stock -> InventoryFragment()
         R.id.nav_riders -> RidersFragment()
-        R.id.nav_sales -> SectionFragment.newInstance(
-            R.string.nav_sales, R.string.section_sales_subtitle, R.string.section_sales_empty, R.drawable.ic_nav_sales,
-        )
+        R.id.nav_sales -> SalesFragment()
         R.id.nav_reports -> SectionFragment.newInstance(
             R.string.nav_reports, R.string.section_reports_subtitle, R.string.section_reports_empty, R.drawable.ic_nav_reports,
         )

@@ -72,6 +72,21 @@
         <item name="hintTextColor">?attr/colorPrimary</item>
     </style>
 
+    <!-- Dropdown field (e.g. rider picker): same shape as text fields. -->
+    <style name="Widget.Malunggay.TextInputLayout.Dropdown" parent="Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="boxCornerRadiusTopStart">@dimen/radius_input</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/radius_input</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/radius_input</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/radius_input</item>
+        <item name="boxStrokeColor">@color/input_stroke</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">2dp</item>
+        <item name="boxBackgroundColor">?attr/colorSurface</item>
+        <item name="startIconTint">@color/input_icon</item>
+        <item name="endIconTint">@color/input_icon</item>
+        <item name="hintTextColor">?attr/colorPrimary</item>
+    </style>
+
     <style name="Widget.Malunggay.Button" parent="Widget.Material3.Button">
         <item name="android:minHeight">@dimen/button_height</item>
         <item name="android:insetTop">0dp</item>
@@ -126,7 +141,46 @@
         <item name="android:color">@android:color/transparent</item>
     </style>
 
+    <!--
+        Section card: a white rounded block with a hairline border on the light grey page.
+        Every screen groups its content (forms, lists, charts) in these, so all screens share
+        one structure. Margins are part of the style, so XML stays short.
+    -->
+    <style name="Malunggay.SectionCard" parent="">
+        <item name="android:background">@drawable/bg_section_card</item>
+        <item name="android:layout_marginStart">@dimen/screen_padding</item>
+        <item name="android:layout_marginEnd">@dimen/screen_padding</item>
+    </style>
+
+    <!-- Card that holds a form: inner padding for inputs. -->
+    <style name="Malunggay.SectionCard.Padded">
+        <item name="android:padding">@dimen/space_lg</item>
+    </style>
+
+    <!-- Card that holds a list: vertical padding only; rows bring their own side padding. -->
+    <style name="Malunggay.SectionCard.List">
+        <item name="android:paddingTop">@dimen/space_xs</item>
+        <item name="android:paddingBottom">@dimen/space_xs</item>
+    </style>
+
+    <!-- Uppercase section label above a card. -->
+    <style name="Malunggay.SectionLabel" parent="">
+        <item name="android:textAppearance">@style/TextAppearance.Malunggay.Label</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_marginStart">@dimen/space_xl</item>
+        <item name="android:layout_marginEnd">@dimen/space_xl</item>
+        <item name="android:layout_marginTop">@dimen/space_xl</item>
+        <item name="android:layout_marginBottom">@dimen/space_sm</item>
+    </style>
+
     <!-- ===== Typography ===== -->
+
+    <!-- Title of a sub-screen (next to the back arrow): same weight as tab titles, smaller. -->
+    <style name="TextAppearance.Malunggay.PageTitle" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textFontWeight">700</item>
+        <item name="android:textStyle">bold</item>
+    </style>
 
     <style name="TextAppearance.Malunggay.NavLabel" parent="TextAppearance.Material3.LabelMedium" />
 

@@ -27,9 +27,11 @@
     <dimen name="logo_icon">40dp</dimen>
     <!-- List divider starts after the avatar: screen_padding (20) + avatar (44) + gap (16). -->
     <dimen name="rider_divider_inset">80dp</dimen>
+    <!-- Production history divider starts after the date badge: space_xl (24) + badge (48) + gap (16). -->
+    <dimen name="production_divider_inset">88dp</dimen>
 
     <!-- Login header -->
     <dimen name="login_header_padding_top">40dp</dimen>
-    <dimen name="login_header_padding_bottom">64dp</dimen>
+    <dimen name="login_header_padding_bottom">24dp</dimen>
     <dimen name="login_sheet_overlap">-28dp</dimen>
 </resources>

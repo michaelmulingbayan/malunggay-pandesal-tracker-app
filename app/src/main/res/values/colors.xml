@@ -44,6 +44,16 @@
     <color name="white">#FFFFFFFF</color>
     <color name="black">#FF000000</color>
 
+    <!--
+        Charts: stock flow bar + legend (light mode).
+        Production = soft track, Sold = dark (the headline), Returned = bright mid green.
+        Validated with the dataviz palette script: adjacent pairs ΔE ≥ 23 for normal and CVD vision.
+        The soft track is low-contrast on white by design, so the legend always lists the values.
+    -->
+    <color name="chart_produced">@color/emerald_100</color>
+    <color name="chart_sold">@color/emerald_800</color>
+    <color name="chart_returned">@color/emerald_500</color>
+
     <!-- Brand header gradient (light mode) -->
     <color name="brand_header_start">@color/emerald_600</color>
     <color name="brand_header_end">@color/emerald_900</color>

@@ -30,6 +30,16 @@
             android:exported="false" />
 
         <activity
+            android:name=".ui.production.ProductionActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ui.distribution.DistributeStockActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+
+        <activity
             android:name=".ui.riders.AddRiderActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />

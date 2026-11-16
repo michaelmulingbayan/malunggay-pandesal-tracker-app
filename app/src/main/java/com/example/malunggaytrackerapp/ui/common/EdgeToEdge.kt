@@ -9,10 +9,13 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.updatePadding
 
-/** Draws behind transparent system bars with light status-bar icons (for the emerald header). */
+/**
+ * Draws behind transparent system bars. Headers are plain surface (white / dark), so the
+ * status-bar icons follow the theme: dark icons in light mode, light icons in dark mode.
+ */
 fun ComponentActivity.enableBrandedEdgeToEdge() {
     enableEdgeToEdge(
-        statusBarStyle = SystemBarStyle.dark(Color.TRANSPARENT),
+        statusBarStyle = SystemBarStyle.auto(Color.TRANSPARENT, Color.TRANSPARENT),
         navigationBarStyle = SystemBarStyle.auto(Color.TRANSPARENT, Color.TRANSPARENT),
     )
 }

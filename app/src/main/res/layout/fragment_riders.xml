@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/colorSurface"
+    android:background="?android:attr/colorBackground"
     android:orientation="vertical">
 
     <!-- ===== Brand header with round "+" action ===== -->
@@ -18,7 +18,7 @@
         android:paddingStart="@dimen/screen_padding"
         android:paddingTop="@dimen/space_lg"
         android:paddingEnd="@dimen/screen_padding"
-        android:paddingBottom="@dimen/space_2xl">
+        android:paddingBottom="@dimen/space_sm">
 
         <LinearLayout
             android:layout_width="0dp"
@@ -32,7 +32,7 @@
                 android:accessibilityHeading="true"
                 android:text="@string/nav_riders"
                 android:textAppearance="@style/TextAppearance.Malunggay.Display"
-                android:textColor="@color/white" />
+                android:textColor="?attr/colorOnSurface" />
 
             <TextView
                 android:id="@+id/subtitleText"
@@ -41,7 +41,7 @@
                 android:layout_marginTop="2dp"
                 android:text="@string/section_riders_subtitle"
                 android:textAppearance="?attr/textAppearanceBodyMedium"
-                android:textColor="@color/emerald_100"
+                android:textColor="?attr/colorOnSurfaceVariant"
                 tools:text="3 active of 4" />
         </LinearLayout>
 
@@ -53,23 +53,26 @@
             android:contentDescription="@string/riders_add"
             android:src="@drawable/ic_add"
             android:tooltipText="@string/riders_add"
-            app:tint="?attr/colorPrimary" />
+            app:tint="?attr/colorOnPrimary" />
     </LinearLayout>
 
     <!-- ===== Flat sheet: list / loading / empty / error ===== -->
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="-20dp"
+        android:layout_marginTop="0dp"
         android:background="@drawable/bg_sheet">
 
+        <!-- List in a section card; wrap_content up to the screen height, then it scrolls inside. -->
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/riderList"
+            style="@style/Malunggay.SectionCard.List"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:clipToPadding="false"
-            android:paddingTop="@dimen/space_md"
-            android:paddingBottom="@dimen/space_xl"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:layout_marginTop="@dimen/space_md"
+            android:layout_marginBottom="@dimen/space_lg"
+            android:clipToOutline="true"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:listitem="@layout/item_rider" />
 
