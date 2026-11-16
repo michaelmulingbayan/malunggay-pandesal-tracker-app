@@ -45,6 +45,7 @@
         <item name="materialButtonStyle">@style/Widget.Malunggay.Button</item>
         <item name="materialCardViewStyle">@style/Widget.Malunggay.Card</item>
         <item name="circularProgressIndicatorStyle">@style/Widget.Malunggay.CircularProgress</item>
+        <item name="bottomNavigationStyle">@style/Widget.Malunggay.BottomNavigation</item>
 
         <item name="android:statusBarColor">@android:color/transparent</item>
         <item name="android:navigationBarColor">@android:color/transparent</item>

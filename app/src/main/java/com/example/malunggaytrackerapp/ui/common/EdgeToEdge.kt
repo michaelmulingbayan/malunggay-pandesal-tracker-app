@@ -9,16 +9,21 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.updatePadding
 
-/**
- * Standard screen setup for the Malunggay design system:
- * the emerald [header] runs behind the status bar (with light status-bar icons),
- * and [root] keeps its content clear of the navigation bar and keyboard.
- */
-fun ComponentActivity.setupBrandedEdgeToEdge(root: View, header: View) {
+/** Draws behind transparent system bars with light status-bar icons (for the emerald header). */
+fun ComponentActivity.enableBrandedEdgeToEdge() {
     enableEdgeToEdge(
         statusBarStyle = SystemBarStyle.dark(Color.TRANSPARENT),
         navigationBarStyle = SystemBarStyle.auto(Color.TRANSPARENT, Color.TRANSPARENT),
     )
+}
+
+/**
+ * Standard screen setup for the Malunggay design system:
+ * the emerald [header] runs behind the status bar, and [root] keeps its content clear
+ * of the navigation bar and keyboard.
+ */
+fun ComponentActivity.setupBrandedEdgeToEdge(root: View, header: View) {
+    enableBrandedEdgeToEdge()
 
     val headerTop = header.paddingTop
     val rootBottom = root.paddingBottom
@@ -35,4 +40,15 @@ fun ComponentActivity.setupBrandedEdgeToEdge(root: View, header: View) {
         )
         insets
     }
+}
+
+/** Pushes a header's content below the status bar while its background stays behind it. */
+fun View.padTopForStatusBar() {
+    val initialTop = paddingTop
+    ViewCompat.setOnApplyWindowInsetsListener(this) { v, insets ->
+        val top = insets.getInsets(WindowInsetsCompat.Type.systemBars() or WindowInsetsCompat.Type.displayCutout()).top
+        v.updatePadding(top = initialTop + top)
+        insets
+    }
+    ViewCompat.requestApplyInsets(this)
 }

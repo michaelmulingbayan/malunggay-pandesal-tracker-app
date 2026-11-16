@@ -47,6 +47,7 @@
         <item name="materialButtonStyle">@style/Widget.Malunggay.Button</item>
         <item name="materialCardViewStyle">@style/Widget.Malunggay.Card</item>
         <item name="circularProgressIndicatorStyle">@style/Widget.Malunggay.CircularProgress</item>
+        <item name="bottomNavigationStyle">@style/Widget.Malunggay.BottomNavigation</item>
 
         <!-- Edge-to-edge: content draws behind transparent system bars. -->
         <item name="android:statusBarColor">@android:color/transparent</item>
@@ -101,7 +102,38 @@
         <item name="trackThickness">3dp</item>
     </style>
 
+    <!--
+        Flat, icon-only bottom navigation. The active tab shows a filled emerald icon
+        (no highlight); inactive tabs show muted outline icons. Tab titles are still used
+        for accessibility (TalkBack) and long-press tooltips.
+    -->
+    <style name="Widget.Malunggay.BottomNavigation" parent="Widget.Material3.BottomNavigationView">
+        <item name="backgroundTint">?attr/colorSurface</item>
+        <item name="elevation">0dp</item>
+        <item name="android:minHeight">64dp</item>
+        <item name="itemIconTint">@color/bottom_nav_icon</item>
+        <item name="itemTextColor">@color/bottom_nav_label</item>
+        <item name="itemIconSize">24dp</item>
+        <item name="itemRippleColor">@android:color/transparent</item>
+        <item name="labelVisibilityMode">unlabeled</item>
+        <item name="itemActiveIndicatorStyle">@style/Widget.Malunggay.BottomNavigation.Indicator</item>
+        <item name="itemTextAppearanceActive">@style/TextAppearance.Malunggay.NavLabel.Active</item>
+        <item name="itemTextAppearanceInactive">@style/TextAppearance.Malunggay.NavLabel</item>
+    </style>
+
+    <!-- No highlight behind the active icon; the filled icon marks the active tab. -->
+    <style name="Widget.Malunggay.BottomNavigation.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@android:color/transparent</item>
+    </style>
+
     <!-- ===== Typography ===== -->
+
+    <style name="TextAppearance.Malunggay.NavLabel" parent="TextAppearance.Material3.LabelMedium" />
+
+    <style name="TextAppearance.Malunggay.NavLabel.Active">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textFontWeight">600</item>
+    </style>
 
     <style name="TextAppearance.Malunggay.Display" parent="TextAppearance.Material3.HeadlineSmall">
         <item name="android:fontFamily">sans-serif-medium</item>

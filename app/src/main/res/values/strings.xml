@@ -25,4 +25,23 @@
     <string name="home_welcome">Welcome, %1$s</string>
     <string name="home_logout">Log out</string>
     <string name="home_session_expired">Your session has expired. Please sign in again.</string>
+    <string name="home_retry">Try again</string>
+
+    <!-- Admin bottom navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_stock">Stock</string>
+    <string name="nav_riders">Riders</string>
+    <string name="nav_sales">Sales</string>
+    <string name="nav_reports">Reports</string>
+
+    <!-- Section screens -->
+    <string name="section_stock_subtitle">Production &amp; inventory</string>
+    <string name="section_stock_empty">Production batches, distributions, returns and inventory adjustments will appear here.</string>
+    <string name="section_riders_subtitle">Your delivery team</string>
+    <string name="section_riders_empty">Riders, their availability and live locations will appear here.</string>
+    <string name="section_sales_subtitle">Daily sales from riders</string>
+    <string name="section_sales_empty">Sales recorded by riders, with totals per day, will appear here.</string>
+    <string name="section_reports_subtitle">Insights &amp; summaries</string>
+    <string name="section_reports_empty">Production, sales and returns reports will appear here.</string>
+    <string name="section_coming_soon">Coming soon</string>
 </resources>

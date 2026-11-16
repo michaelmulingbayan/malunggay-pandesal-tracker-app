@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Icons switch to their filled version when the tab is active (see ic_nav_*_selector). -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/ic_nav_home_selector"
+        android:title="@string/nav_home" />
+    <item
+        android:id="@+id/nav_stock"
+        android:icon="@drawable/ic_nav_stock_selector"
+        android:title="@string/nav_stock" />
+    <item
+        android:id="@+id/nav_riders"
+        android:icon="@drawable/ic_nav_riders_selector"
+        android:title="@string/nav_riders" />
+    <item
+        android:id="@+id/nav_sales"
+        android:icon="@drawable/ic_nav_sales_selector"
+        android:title="@string/nav_sales" />
+    <item
+        android:id="@+id/nav_reports"
+        android:icon="@drawable/ic_nav_reports_selector"
+        android:title="@string/nav_reports" />
+</menu>

@@ -14,6 +14,7 @@ import androidx.lifecycle.repeatOnLifecycle
 import com.example.malunggaytrackerapp.BuildConfig
 import com.example.malunggaytrackerapp.R
 import com.example.malunggaytrackerapp.databinding.ActivityLoginBinding
+import com.example.malunggaytrackerapp.ui.common.LocalNetworkAccess
 import com.example.malunggaytrackerapp.ui.common.setupBrandedEdgeToEdge
 import com.example.malunggaytrackerapp.ui.home.HomeActivity
 import kotlinx.coroutines.launch
@@ -28,6 +29,7 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
         setupBrandedEdgeToEdge(root = binding.root, header = binding.header)
+        LocalNetworkAccess.requestIfNeeded(this)
 
         binding.versionText.text = getString(R.string.login_version, BuildConfig.VERSION_NAME)
 
