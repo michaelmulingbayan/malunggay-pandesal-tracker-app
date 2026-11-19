@@ -24,6 +24,9 @@ sealed interface SessionState {
 
     /** Token was rejected by the server; the user must sign in again. */
     data object Expired : SessionState
+
+    /** The logout request is in flight; the shell blocks the screen until it finishes. */
+    data object LoggingOut : SessionState
     data object LoggedOut : SessionState
 }
 
@@ -58,8 +61,10 @@ class SessionViewModel(private val authRepository: AuthRepository) : ViewModel()
     }
 
     fun logout() {
+        val current = _state.value
+        if (current is SessionState.LoggingOut || current is SessionState.LoggedOut) return
         loadJob?.cancel()
-        _state.value = SessionState.Loading
+        _state.value = SessionState.LoggingOut
         viewModelScope.launch {
             authRepository.logout()
             _state.value = SessionState.LoggedOut

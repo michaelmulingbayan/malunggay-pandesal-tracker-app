@@ -71,6 +71,7 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun render(state: SessionState) {
+        binding.logoutOverlay.isVisible = state is SessionState.LoggingOut
         when (state) {
             is SessionState.Ready -> setAdminNavigationVisible(state.user.isAdmin)
             SessionState.Expired -> {
@@ -78,7 +79,7 @@ class HomeActivity : AppCompatActivity() {
                 goToLogin()
             }
             SessionState.LoggedOut -> goToLogin()
-            SessionState.Loading, is SessionState.Error -> Unit
+            SessionState.Loading, SessionState.LoggingOut, is SessionState.Error -> Unit
         }
     }
 

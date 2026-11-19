@@ -24,6 +24,7 @@
     <!-- Home -->
     <string name="home_welcome">Welcome, %1$s</string>
     <string name="home_logout">Log out</string>
+    <string name="home_logging_out">Logging out…</string>
     <string name="home_session_expired">Your session has expired. Please sign in again.</string>
     <string name="home_retry">Try again</string>
 
