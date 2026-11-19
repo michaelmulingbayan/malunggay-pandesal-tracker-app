@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- White round map control (zoom in / out): hairline border, emerald ripple. -->
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="?attr/colorPrimaryContainer">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="?attr/colorSurface" />
+            <stroke
+                android:width="1dp"
+                android:color="?attr/colorOutline" />
+        </shape>
+    </item>
+</ripple>

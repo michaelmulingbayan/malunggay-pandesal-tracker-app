@@ -9,6 +9,8 @@ import com.example.malunggaytrackerapp.data.SalesRepository
 import com.example.malunggaytrackerapp.data.StockRepository
 import com.example.malunggaytrackerapp.data.local.TokenStore
 import com.example.malunggaytrackerapp.data.remote.ApiClient
+import org.osmdroid.config.Configuration
+import java.io.File
 
 /**
  * Holds the app-wide singletons. Access with `(application as MalunggayApp).authRepository`.
@@ -43,5 +45,13 @@ class MalunggayApp : Application() {
         stockRepository = StockRepository(apiClient.stockDistributionApi)
         inventoryRepository = InventoryRepository(apiClient.inventoryApi)
         salesRepository = SalesRepository(apiClient.salesApi)
+
+        // OpenStreetMap (osmdroid): identify the app to the tile servers (their usage policy
+        // requires it) and keep the tile cache in app-private storage (no storage permission).
+        Configuration.getInstance().apply {
+            userAgentValue = "MalunggayTracker/${BuildConfig.VERSION_NAME} (Android; $packageName)"
+            osmdroidBasePath = File(cacheDir, "osmdroid")
+            osmdroidTileCache = File(cacheDir, "osmdroid/tiles")
+        }
     }
 }
