@@ -18,6 +18,10 @@ interface RiderApi {
     @POST("api/v1/riders")
     suspend fun create(@Body body: CreateRiderRequest): Response<DataResponse<RiderAccountDto>>
 
+    /** Latest position of every active rider who shared a location. */
+    @GET("api/v1/riders/locations")
+    suspend fun locations(): Response<DataResponse<List<RiderPositionDto>>>
+
     @PATCH("api/v1/riders/{rider}/status")
     suspend fun updateStatus(
         @Path("rider") riderId: Long,
@@ -36,6 +40,18 @@ data class RiderAccountDto(
     @SerializedName("address") val address: String,
     @SerializedName("availability_status") val availabilityStatus: String,
     @SerializedName("is_active") val isActive: Boolean,
+)
+
+/** A rider's latest shared position, for the admin map. */
+@Keep
+data class RiderPositionDto(
+    @SerializedName("rider_id") val riderId: Long,
+    @SerializedName("name") val name: String,
+    @SerializedName("is_available") val isAvailable: Boolean,
+    @SerializedName("latitude") val latitude: Double,
+    @SerializedName("longitude") val longitude: Double,
+    /** UTC timestamp. */
+    @SerializedName("recorded_at") val recordedAt: String,
 )
 
 @Keep

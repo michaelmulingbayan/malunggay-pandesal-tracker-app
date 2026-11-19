@@ -10,6 +10,7 @@ import com.example.malunggaytrackerapp.data.ApiResult
 import com.example.malunggaytrackerapp.data.InventoryRepository
 import com.example.malunggaytrackerapp.data.RiderRepository
 import com.example.malunggaytrackerapp.data.SalesRepository
+import com.example.malunggaytrackerapp.data.remote.RiderPositionDto
 import com.example.malunggaytrackerapp.ui.common.UiText
 import com.example.malunggaytrackerapp.ui.common.errorMessage
 import kotlinx.coroutines.Job
@@ -31,6 +32,11 @@ data class DashboardUiState(
     val distributed: Int = 0,
     val activeRiders: Int = 0,
     val error: UiText? = null,
+    /** Latest shared position per rider, for the map. */
+    val riderPositions: List<RiderPositionDto> = emptyList(),
+    val positionsLoaded: Boolean = false,
+    /** Device time of the last successful map refresh. */
+    val positionsRefreshedAt: Long? = null,
 )
 
 /** Today's numbers for the admin dashboard, gathered from the sales, inventory and riders APIs. */
@@ -73,6 +79,25 @@ class DashboardViewModel(
                     next = next.copy(activeRiders = riders.data.count { it.isActive })
                 }
                 next.copy(error = listOf(sales, inventory, riders).firstOrNull { it !is ApiResult.Success }?.errorMessage())
+            }
+        }
+    }
+
+    private var positionsJob: Job? = null
+
+    /** Refreshes only the rider positions (called every ~30 s while the dashboard is on screen). */
+    fun refreshLocations() {
+        if (positionsJob?.isActive == true) return
+        positionsJob = viewModelScope.launch {
+            val result = riderRepository.locations()
+            if (result is ApiResult.Success) {
+                _state.update {
+                    it.copy(
+                        riderPositions = result.data,
+                        positionsLoaded = true,
+                        positionsRefreshedAt = System.currentTimeMillis(),
+                    )
+                }
             }
         }
     }

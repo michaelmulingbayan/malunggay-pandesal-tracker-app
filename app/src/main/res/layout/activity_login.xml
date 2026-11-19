@@ -182,6 +182,17 @@
                     app:indicatorSize="24dp" />
             </FrameLayout>
 
+            <!-- Customers (no account): find a rider nearby -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/findRiderButton"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/space_md"
+                android:text="@string/customer_find_rider"
+                app:icon="@drawable/ic_location"
+                app:iconGravity="textStart" />
+
             <!-- ===== Footer (pinned to the bottom of the sheet) ===== -->
             <View
                 android:layout_width="match_parent"

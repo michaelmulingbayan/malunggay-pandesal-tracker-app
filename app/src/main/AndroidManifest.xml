@@ -3,6 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Lets the map (osmdroid) know when it can download tiles. -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- Riders can share their location with the admin while the app is open. -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
         android:name=".MalunggayApp"
@@ -30,6 +35,9 @@
             android:exported="false" />
 
         <activity
+            android:name=".ui.customer.FindRiderActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.production.ProductionActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
@@ -43,6 +51,10 @@
             android:name=".ui.riders.AddRiderActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
+
+        <activity
+            android:name=".ui.reports.ReportDetailActivity"
+            android:exported="false" />
 
     </application>
 

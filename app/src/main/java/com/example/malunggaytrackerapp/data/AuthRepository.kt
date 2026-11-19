@@ -5,6 +5,7 @@ import com.example.malunggaytrackerapp.data.local.TokenStore
 import com.example.malunggaytrackerapp.data.remote.AuthApi
 import com.example.malunggaytrackerapp.data.remote.LoginRequest
 import com.example.malunggaytrackerapp.data.remote.UserDto
+import kotlinx.coroutines.withTimeoutOrNull
 
 class AuthRepository(
     private val api: AuthApi,
@@ -31,9 +32,16 @@ class AuthRepository(
             else -> result.asFailure()
         }
 
-    /** Revokes the token on the server (best effort) and always clears it locally. */
+    /**
+     * Revokes the token on the server (best effort) and always clears it locally.
+     * The server call is capped so a dead connection can't keep the user stuck on "Logging out…".
+     */
     suspend fun logout() {
-        safeApiCall { api.logout() }
+        withTimeoutOrNull(LOGOUT_TIMEOUT_MS) { safeApiCall { api.logout() } }
         tokenStore.clear()
+    }
+
+    private companion object {
+        const val LOGOUT_TIMEOUT_MS = 5_000L
     }
 }
