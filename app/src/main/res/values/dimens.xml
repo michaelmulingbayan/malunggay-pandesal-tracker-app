@@ -29,6 +29,8 @@
     <dimen name="rider_divider_inset">80dp</dimen>
     <!-- Production history divider starts after the date badge: space_xl (24) + badge (48) + gap (16). -->
     <dimen name="production_divider_inset">88dp</dimen>
+    <!-- Rider activity rows: space_lg (16) + icon (40) + gap (12). -->
+    <dimen name="activity_divider_inset">68dp</dimen>
 
     <!-- Login header -->
     <dimen name="login_header_padding_top">40dp</dimen>

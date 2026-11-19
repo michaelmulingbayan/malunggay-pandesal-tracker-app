@@ -39,6 +39,7 @@ class ApiClient(tokenStore: TokenStore) {
     val stockDistributionApi: StockDistributionApi = retrofit.create(StockDistributionApi::class.java)
     val inventoryApi: InventoryApi = retrofit.create(InventoryApi::class.java)
     val salesApi: SalesApi = retrofit.create(SalesApi::class.java)
+    val myStockApi: MyStockApi = retrofit.create(MyStockApi::class.java)
     val reportsApi: ReportsApi = retrofit.create(ReportsApi::class.java)
 }
 
