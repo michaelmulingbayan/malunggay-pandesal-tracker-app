@@ -43,6 +43,49 @@ object DateLabels {
 
     fun dayOfMonth(isoDate: String): String = format(isoDate, "d")
 
+    /** e.g. "Tue" — chart labels for days. */
+    fun weekdayShort(isoDate: String): String = format(isoDate, "EEE")
+
+    /** e.g. "Nov" — chart labels for months. */
+    fun monthName(isoDate: String): String = format(isoDate, "MMM")
+
+    /** e.g. "11/16" — compact chart labels for weeks and days of a month. */
+    fun monthDay(isoDate: String): String = format(isoDate, "M/d")
+
+    /** e.g. "November 2026". */
+    fun monthYear(isoDate: String): String = format(isoDate, "MMMM yyyy")
+
+    /** A short range: "Nov 16 – 22", or "Nov 30 – Dec 6" when it crosses a month. */
+    fun range(fromIso: String, toIso: String): String {
+        val sameMonth = fromIso.take(7) == toIso.take(7)
+        return "${format(fromIso, "MMM d")} – ${format(toIso, if (sameMonth) "d" else "MMM d")}"
+    }
+
+    /** The Monday of [isoDate]'s week (weeks run Monday–Sunday, like the server's reports). */
+    fun mondayOf(isoDate: String): String {
+        val date = isoFormat().parse(isoDate) ?: return isoDate
+        val dayOfWeek = Calendar.getInstance().apply { time = date }.get(Calendar.DAY_OF_WEEK)
+        return shift(isoDate, days = -((dayOfWeek + 5) % 7)) // Monday → 0 … Sunday → 6
+    }
+
+    /** First and last day of [isoDate]'s month. */
+    fun monthBounds(isoDate: String): Pair<String, String> {
+        val first = isoDate.take(8) + "01"
+        return first to shift(shift(first, months = 1), days = -1)
+    }
+
+    /** Moves an ISO date by days / months (months keep to the 1st so Jan 31 + 1 month never overflows). */
+    fun shift(isoDate: String, days: Int = 0, months: Int = 0): String {
+        val date = isoFormat().parse(isoDate) ?: return isoDate
+        val calendar = Calendar.getInstance().apply { time = date }
+        if (months != 0) {
+            calendar.set(Calendar.DAY_OF_MONTH, 1)
+            calendar.add(Calendar.MONTH, months)
+        }
+        calendar.add(Calendar.DAY_OF_MONTH, days)
+        return isoFormat().format(calendar.time)
+    }
+
     /** Laravel UTC timestamp ("2026-11-16T04:59:32.000000Z") → local time, e.g. "12:59 PM". */
     fun timeOf(isoTimestamp: String): String {
         val date = parseUtcTimestamp(isoTimestamp) ?: return ""

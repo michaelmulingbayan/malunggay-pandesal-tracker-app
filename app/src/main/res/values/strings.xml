@@ -35,6 +35,105 @@
     <string name="nav_sales">Sales</string>
     <string name="nav_reports">Reports</string>
 
+    <!-- Reports -->
+    <string name="reports_title">Reports</string>
+    <string name="reports_daily">Daily</string>
+    <string name="reports_weekly">Weekly</string>
+    <string name="reports_monthly">Monthly</string>
+    <string name="reports_pieces_sold">Pieces sold</string>
+    <string name="reports_last_7_days">Last 7 days</string>
+    <string name="reports_last_8_weeks">Last 8 weeks</string>
+    <string name="reports_last_6_months">Last 6 months</string>    <string name="reports_total">%1$s pcs · %2$s</string>
+    <string name="reports_chart_description">Pieces sold: %1$s</string>
+    <string name="reports_chart_point">%1$s %2$s</string>
+    <string name="reports_production">Production report</string>
+    <string name="reports_sales">Sales report</string>
+    <string name="reports_inventory">Inventory report</string>
+    <string name="reports_distribution">Stock distribution report</string>
+    <string name="reports_rider_performance">Rider performance report</string>
+
+    <!-- Report screens -->
+    <string name="report_previous">Previous period</string>
+    <string name="report_next">Next period</string>
+    <string name="report_this_week">This week</string>
+    <string name="report_this_month">This month</string>
+    <string name="report_back_to_now">Tap to go back to now</string>
+    <string name="report_empty_title">Nothing recorded</string>
+    <string name="report_empty_day">There is no activity on this day. Use ◀ to look at an earlier day.</string>
+    <string name="report_empty_week">There is no activity in this week. Use ◀ to look at an earlier week.</string>
+    <string name="report_empty_month">There is no activity in this month. Use ◀ to look at an earlier month.</string>
+    <string name="report_section_empty">Nothing to show</string>
+    <string name="report_chart_hint">Tap a bar to see its number</string>
+    <string name="report_chart_description">%1$s: %2$s</string>
+    <string name="report_percent_of">%1$d%% of total</string>
+    <string name="report_share">%1$d%% of sales</string>
+    <string name="report_by">by %1$s</string>
+    <string name="report_left">%1$s left</string>
+    <string name="report_rank">%1$d. %2$s</string>
+    <string name="report_of_assigned">of %1$s assigned</string>
+    <string name="report_returned_count">%1$s returned</string>
+
+    <string name="report_produced">Produced</string>
+    <string name="report_batches">Batches</string>
+    <string name="report_average_per_baking_day">Average per baking day</string>
+    <string name="report_distributed">Distributed</string>
+    <string name="report_distributed_lower">distributed</string>
+    <string name="report_not_distributed">Not distributed</string>
+    <string name="report_not_distributed_hint">Stayed at the bakery</string>
+    <string name="report_total_sales">Total sales</string>
+    <string name="report_pieces_sold">Pieces sold</string>
+    <string name="report_sales_recorded">Sales recorded</string>
+    <string name="report_average_price">Average price</string>
+    <string name="report_per_piece">per piece</string>
+    <string name="report_riders_selling">Riders who sold</string>
+    <string name="report_sold">Sold</string>
+    <string name="report_sold_lower">sold</string>
+    <string name="report_returned">Returned</string>
+    <string name="report_with_riders">Still with riders</string>
+    <string name="report_with_riders_hint">Not sold or returned yet</string>
+    <string name="report_sell_through">Sell-through</string>
+    <string name="report_sell_through_hint">Sold out of what was given to riders</string>
+    <string name="report_assignments">Assignments</string>
+    <string name="report_riders">Riders</string>
+    <string name="report_top_rider">Top rider</string>
+
+    <string name="report_chart_produced">Produced per day</string>
+    <string name="report_chart_sold">Pieces sold per day</string>
+    <string name="report_chart_distributed">Distributed per day</string>
+
+    <string name="report_section_batches">Batches</string>
+    <string name="report_section_by_rider">By rider</string>
+    <string name="report_section_by_day">By day</string>
+    <string name="report_section_returns">Returns</string>
+    <string name="report_section_assignments">Assignments</string>
+    <string name="report_section_ranking">Ranking (by sales)</string>
+
+    <string name="report_rider_sales_detail">%1$s · %2$s</string>
+    <string name="report_inventory_day_detail">Produced %1$s · Out %2$s · Returned %3$s</string>
+    <string name="report_flow_detail">%1$s · sold %2$s · returned %3$s</string>
+    <string name="report_assignment_detail">%1$s · sold %2$s · returned %3$s</string>
+    <string name="report_rider_performance_detail">Sold %1$s of %2$s (%3$d%%) · %4$s · ~%5$s a day</string>
+    <string name="report_returns_verified_hint">Checked by the admin</string>
+    <string name="report_returns_pending_hint">Waiting to be checked</string>
+    <string name="report_returns_rejected_hint">Not counted as returned</string>
+
+    <plurals name="report_baking_days">
+        <item quantity="one">%d baking day</item>
+        <item quantity="other">%d baking days</item>
+    </plurals>
+    <plurals name="report_sales_count">
+        <item quantity="one">%d sale</item>
+        <item quantity="other">%d sales</item>
+    </plurals>
+    <plurals name="report_assignments_count">
+        <item quantity="one">%d assignment</item>
+        <item quantity="other">%d assignments</item>
+    </plurals>
+    <plurals name="report_days_active">
+        <item quantity="one">%d day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+
     <!-- Section screens -->
     <string name="section_stock_subtitle">Production &amp; inventory</string>
     <string name="section_stock_empty">Production batches, distributions, returns and inventory adjustments will appear here.</string>
@@ -42,8 +141,6 @@
     <string name="section_riders_empty">Riders, their availability and live locations will appear here.</string>
     <string name="section_sales_subtitle">Daily sales from riders</string>
     <string name="section_sales_empty">Sales recorded by riders, with totals per day, will appear here.</string>
-    <string name="section_reports_subtitle">Insights &amp; summaries</string>
-    <string name="section_reports_empty">Production, sales and returns reports will appear here.</string>
     <string name="section_coming_soon">Coming soon</string>
 
     <!-- Riders list -->
@@ -217,6 +314,7 @@
     <string name="sales_rider_description">%1$s sold %2$s pieces for %3$s</string>
     <string name="sales_share">%1$d%% of total</string>
 
+    <string name="return_status_pending">Pending</string>
     <!-- Price per piece -->
     <string name="price_label">Price per piece</string>
     <string name="price_value">%1$s / pc</string>

@@ -6,6 +6,7 @@ import retrofit2.Response
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
+import retrofit2.http.Query
 
 /** Sales reporting and the admin-set price per piece. */
 interface SalesApi {
@@ -13,6 +14,10 @@ interface SalesApi {
     /** Today's sales totals and per-rider breakdown. */
     @GET("api/v1/sales/summary")
     suspend fun todaySummary(): Response<DataResponse<SalesSummaryDto>>
+
+    /** Pieces sold per day (last 7 days) or per month (last 6 months), oldest first. [period] is "daily" or "monthly". */
+    @GET("api/v1/reports/pieces-sold")
+    suspend fun piecesSoldReport(@Query("period") period: String): Response<DataResponse<PiecesSoldReportDto>>
 
     /** Price history, newest first: the first item is the current price. */
     @GET("api/v1/prices")
@@ -55,4 +60,24 @@ data class RiderSalesDto(
     @SerializedName("pieces_sold") val piecesSold: Int,
     @SerializedName("total_amount") val totalAmount: String,
     @SerializedName("sales_count") val salesCount: Int,
+)
+
+@Keep
+data class PiecesSoldReportDto(
+    /** "daily" or "monthly". */
+    @SerializedName("period") val period: String,
+    @SerializedName("from") val from: String,
+    @SerializedName("to") val to: String,
+    @SerializedName("pieces_sold") val piecesSold: Int,
+    @SerializedName("total_amount") val totalAmount: String,
+    /** One per day / month, oldest first; the last one is today / this month. */
+    @SerializedName("points") val points: List<PiecesSoldPointDto>,
+)
+
+@Keep
+data class PiecesSoldPointDto(
+    /** "yyyy-MM-dd": the day, or the first day of the month. */
+    @SerializedName("start") val start: String,
+    @SerializedName("pieces_sold") val piecesSold: Int,
+    @SerializedName("total_amount") val totalAmount: String,
 )

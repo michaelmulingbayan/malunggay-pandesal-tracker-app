@@ -56,6 +56,10 @@
     <color name="chart_sold">@color/emerald_800</color>
     <color name="chart_returned">@color/emerald_500</color>
 
+    <!-- Reports bar chart: muted sage for past days/months, the brand's dark green for today/this month. -->
+    <color name="chart_bar">#FF8FB8A0</color>
+    <color name="chart_bar_current">#FF2E6F4F</color>
+
     <!-- Brand header gradient (light mode) -->
     <color name="brand_header_start">@color/emerald_600</color>
     <color name="brand_header_end">@color/emerald_900</color>
