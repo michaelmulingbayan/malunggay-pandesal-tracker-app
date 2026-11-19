@@ -352,6 +352,31 @@
     <string name="rider_share_title">Share my location</string>
     <string name="rider_share_body">The admin and customers can see where you are while this app is open.</string>
 
+    <!-- Time ago -->
+    <string name="ago_just_now">just now</string>
+    <string name="ago_minutes">%1$d min ago</string>
+    <string name="ago_hours">%1$d h ago</string>
+
+    <!-- Customer: find a rider -->
+    <string name="customer_find_rider">Find a rider near you</string>
+    <string name="customer_title">Riders near you</string>
+    <string name="customer_subtitle">Updated %1$s</string>
+    <string name="customer_section_list">Nearest first</string>
+    <string name="customer_distance">~%1$s</string>
+    <string name="customer_distance_away">%1$s away</string>
+    <string name="customer_seen">seen %1$s</string>
+    <string name="customer_no_distance">Turn on location to see distance</string>
+    <string name="customer_empty_title">No riders on the road right now</string>
+    <string name="customer_empty_body">Riders appear here when they are available and sharing their location.</string>
+    <string name="customer_location_title">See how far riders are</string>
+    <string name="customer_location_body">Allow location so we can measure the distance. Your location stays on your phone.</string>
+    <string name="customer_location_allow">Allow</string>
+    <string name="customer_my_location">My location</string>
+    <string name="customer_you">You are here</string>
+    <string name="customer_your_location">Your location</string>
+    <string name="customer_locating">Finding your location…</string>
+    <string name="customer_accuracy">±%1$d m</string>
+    <string name="customer_row_description">%1$s, %2$s</string>
     <string name="location_permission_needed">Allow location access to share your location.</string>
     <string name="location_turned_off">Turn on your phone\'s location to share it.</string>
 

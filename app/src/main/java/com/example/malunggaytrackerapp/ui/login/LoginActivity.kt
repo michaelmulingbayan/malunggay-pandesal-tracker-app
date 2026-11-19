@@ -13,6 +13,7 @@ import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import com.example.malunggaytrackerapp.BuildConfig
 import com.example.malunggaytrackerapp.R
+import com.example.malunggaytrackerapp.ui.customer.FindRiderActivity
 import com.example.malunggaytrackerapp.databinding.ActivityLoginBinding
 import com.example.malunggaytrackerapp.ui.common.LocalNetworkAccess
 import com.example.malunggaytrackerapp.ui.common.asString
@@ -35,6 +36,7 @@ class LoginActivity : AppCompatActivity() {
         binding.versionText.text = getString(R.string.login_version, BuildConfig.VERSION_NAME)
 
         binding.loginButton.setOnClickListener { submit() }
+        binding.findRiderButton.setOnClickListener { startActivity(FindRiderActivity.intent(this)) }
         binding.passwordInput.setOnEditorActionListener { _, actionId, _ ->
             if (actionId == EditorInfo.IME_ACTION_DONE) {
                 submit()

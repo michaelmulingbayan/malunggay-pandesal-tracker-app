@@ -4,6 +4,7 @@ import android.app.Application
 import com.example.malunggaytrackerapp.data.AuthRepository
 import com.example.malunggaytrackerapp.data.InventoryRepository
 import com.example.malunggaytrackerapp.data.MyStockRepository
+import com.example.malunggaytrackerapp.data.NearbyRidersRepository
 import com.example.malunggaytrackerapp.data.ProductionRepository
 import com.example.malunggaytrackerapp.data.ReportsRepository
 import com.example.malunggaytrackerapp.data.RiderRepository
@@ -40,6 +41,9 @@ class MalunggayApp : Application() {
     lateinit var myStockRepository: MyStockRepository
         private set
 
+    lateinit var nearbyRidersRepository: NearbyRidersRepository
+        private set
+
     lateinit var reportsRepository: ReportsRepository
         private set
 
@@ -54,6 +58,7 @@ class MalunggayApp : Application() {
         inventoryRepository = InventoryRepository(apiClient.inventoryApi)
         salesRepository = SalesRepository(apiClient.salesApi)
         myStockRepository = MyStockRepository(apiClient.myStockApi)
+        nearbyRidersRepository = NearbyRidersRepository(apiClient.publicApi)
         reportsRepository = ReportsRepository(apiClient.reportsApi)
 
         // OpenStreetMap (osmdroid): identify the app to the tile servers (their usage policy

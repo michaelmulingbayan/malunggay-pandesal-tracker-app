@@ -99,6 +99,17 @@ object DateLabels {
         return "${relative(context, localIsoDate)}, ${timeOf(isoTimestamp)}"
     }
 
+    /** Laravel UTC timestamp → "just now", "5 min ago", "2 h ago". */
+    fun ago(context: Context, isoTimestamp: String): String {
+        val date = parseUtcTimestamp(isoTimestamp) ?: return ""
+        val minutes = ((System.currentTimeMillis() - date.time) / 60_000L).coerceAtLeast(0)
+        return when {
+            minutes < 1 -> context.getString(R.string.ago_just_now)
+            minutes < 60 -> context.getString(R.string.ago_minutes, minutes)
+            else -> context.getString(R.string.ago_hours, minutes / 60)
+        }
+    }
+
     private fun parseUtcTimestamp(isoTimestamp: String): Date? {
         val utc = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss", Locale.US).apply {
             timeZone = TimeZone.getTimeZone("UTC")
@@ -122,6 +133,13 @@ object DateLabels {
         set(Calendar.SECOND, 0)
         set(Calendar.MILLISECOND, 0)
     }.timeInMillis
+}
+
+/** Straight-line distance for people: 350 → "350 m", 1240 → "1.2 km". */
+fun formatDistance(meters: Float): String = when {
+    meters < 50f -> "50 m" // shown as "~50 m": GPS is not more precise than this
+    meters < 1000f -> "${(meters / 10).toInt() * 10} m"
+    else -> String.format(Locale.getDefault(), "%.1f km", meters / 1000f)
 }
 
 /** 1200 → "1,200" (device locale). */

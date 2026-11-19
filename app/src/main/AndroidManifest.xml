@@ -35,6 +35,9 @@
             android:exported="false" />
 
         <activity
+            android:name=".ui.customer.FindRiderActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.production.ProductionActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />

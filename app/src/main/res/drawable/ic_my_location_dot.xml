@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- "You are here": blue dot with a white ring and a soft halo. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#332563EB" />
+            <size
+                android:width="36dp"
+                android:height="36dp" />
+        </shape>
+    </item>
+    <item
+        android:bottom="9dp"
+        android:left="9dp"
+        android:right="9dp"
+        android:top="9dp">
+        <shape android:shape="oval">
+            <solid android:color="#FF2563EB" />
+            <stroke
+                android:width="3dp"
+                android:color="#FFFFFFFF" />
+        </shape>
+    </item>
+</layer-list>
