@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Minimal rounded icon: sales (shopping bag, filled, active state). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M5,8.5H19L18.1,19.2a1.5,1.5 0,0 1,-1.5 1.3H7.4a1.5,1.5 0,0 1,-1.5 -1.3Z"
+        android:strokeWidth="1.8"
+        android:strokeColor="@android:color/white"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <path
+        android:pathData="M8.5,8.5V7a3.5,3.5 0,0 1,7 0v1.5"
+        android:strokeWidth="1.8"
+        android:strokeColor="@android:color/white"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+</vector>

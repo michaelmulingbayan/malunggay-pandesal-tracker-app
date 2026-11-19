@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Minimal rounded icon: riders (filled, active state). -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M5.5,7.5a3.5,3.5 0,1 0,7 0a3.5,3.5 0,1 0,-7 0Z" />
+    <path
+        android:fillColor="@android:color/white"
+        android:pathData="M7.5,14.5h3a4.5,4.5 0,0 1,4.5 4.5v0.5a1,1 0,0 1,-1 1h-10a1,1 0,0 1,-1 -1V19a4.5,4.5 0,0 1,4.5 -4.5Z" />
+    <path
+        android:pathData="M16,4.2a3.5,3.5 0,0 1,0 6.6M21,20.5v-1.5a4,4 0,0 0,-2.8 -3.8"
+        android:strokeWidth="1.8"
+        android:strokeColor="@android:color/white"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+</vector>

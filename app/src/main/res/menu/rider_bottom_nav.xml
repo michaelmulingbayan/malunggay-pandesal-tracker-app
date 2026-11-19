@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Rider bottom navigation: Home, Sell, Stock. Icons switch to filled when active. -->
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_rider_home"
+        android:icon="@drawable/ic_nav_home_selector"
+        android:title="@string/nav_home" />
+    <item
+        android:id="@+id/nav_sell"
+        android:icon="@drawable/ic_nav_sales_selector"
+        android:title="@string/nav_sell" />
+    <item
+        android:id="@+id/nav_rider_stock"
+        android:icon="@drawable/ic_nav_stock_selector"
+        android:title="@string/nav_my_stock" />
+</menu>

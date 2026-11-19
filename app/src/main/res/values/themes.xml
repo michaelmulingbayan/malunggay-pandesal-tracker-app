@@ -1,16 +1,217 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Theme.MalunggayTrackerApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
+
+    <!--
+        Malunggay design system — light theme.
+        Color roles map the emerald palette onto Material 3. Component defaults
+        (inputs, buttons, cards) are set here once so every screen looks the same.
+    -->
+    <style name="Base.Theme.MalunggayTrackerApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Brand -->
+        <item name="colorPrimary">@color/emerald_700</item>
         <item name="colorOnPrimary">@color/white</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_700</item>
-        <item name="colorOnSecondary">@color/black</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
+        <item name="colorPrimaryContainer">@color/emerald_100</item>
+        <item name="colorOnPrimaryContainer">@color/emerald_900</item>
+        <item name="colorSecondary">@color/emerald_800</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondaryContainer">@color/emerald_50</item>
+        <item name="colorOnSecondaryContainer">@color/emerald_900</item>
+        <item name="colorTertiary">@color/emerald_600</item>
+        <item name="colorOnTertiary">@color/white</item>
+
+        <!-- Surfaces -->
+        <item name="android:colorBackground">@color/neutral_50</item>
+        <item name="colorOnBackground">@color/neutral_900</item>
+        <item name="colorSurface">@color/neutral_0</item>
+        <item name="colorOnSurface">@color/neutral_900</item>
+        <item name="colorSurfaceVariant">@color/neutral_100</item>
+        <item name="colorOnSurfaceVariant">@color/neutral_600</item>
+        <item name="colorSurfaceContainerLowest">@color/neutral_0</item>
+        <item name="colorSurfaceContainerLow">@color/neutral_0</item>
+        <item name="colorSurfaceContainer">@color/neutral_50</item>
+        <item name="colorSurfaceContainerHigh">@color/neutral_100</item>
+        <item name="colorSurfaceContainerHighest">@color/neutral_200</item>
+        <item name="colorOutline">@color/neutral_300</item>
+        <item name="colorOutlineVariant">@color/neutral_200</item>
+
+        <!-- Feedback -->
+        <item name="colorError">@color/red_600</item>
+        <item name="colorOnError">@color/white</item>
+        <item name="colorErrorContainer">@color/red_100</item>
+        <item name="colorOnErrorContainer">@color/red_800</item>
+
+        <!-- Clean surfaces: no brand-colored tint on elevated cards/sheets. -->
+        <item name="elevationOverlayEnabled">false</item>
+
+        <!-- Component defaults -->
+        <item name="textInputStyle">@style/Widget.Malunggay.TextInputLayout</item>
+        <item name="materialButtonStyle">@style/Widget.Malunggay.Button</item>
+        <item name="materialCardViewStyle">@style/Widget.Malunggay.Card</item>
+        <item name="circularProgressIndicatorStyle">@style/Widget.Malunggay.CircularProgress</item>
+        <item name="bottomNavigationStyle">@style/Widget.Malunggay.BottomNavigation</item>
+
+        <!-- Edge-to-edge: content draws behind transparent system bars. -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+    </style>
+
+    <style name="Theme.MalunggayTrackerApp" parent="Base.Theme.MalunggayTrackerApp" />
+
+    <!-- ===== Components ===== -->
+
+    <style name="Widget.Malunggay.TextInputLayout" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusTopStart">@dimen/radius_input</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/radius_input</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/radius_input</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/radius_input</item>
+        <item name="boxStrokeColor">@color/input_stroke</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">2dp</item>
+        <item name="boxBackgroundColor">?attr/colorSurface</item>
+        <item name="startIconTint">@color/input_icon</item>
+        <item name="endIconTint">@color/input_icon</item>
+        <item name="hintTextColor">?attr/colorPrimary</item>
+    </style>
+
+    <!-- Dropdown field (e.g. rider picker): same shape as text fields. -->
+    <style name="Widget.Malunggay.TextInputLayout.Dropdown" parent="Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="boxCornerRadiusTopStart">@dimen/radius_input</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/radius_input</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/radius_input</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/radius_input</item>
+        <item name="boxStrokeColor">@color/input_stroke</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">2dp</item>
+        <item name="boxBackgroundColor">?attr/colorSurface</item>
+        <item name="startIconTint">@color/input_icon</item>
+        <item name="endIconTint">@color/input_icon</item>
+        <item name="hintTextColor">?attr/colorPrimary</item>
+    </style>
+
+    <style name="Widget.Malunggay.Button" parent="Widget.Material3.Button">
+        <item name="android:minHeight">@dimen/button_height</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="cornerRadius">@dimen/radius_button</item>
+        <item name="android:textAppearance">@style/TextAppearance.Malunggay.Button</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+
+    <style name="Widget.Malunggay.Button.Outlined" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:minHeight">@dimen/button_height</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="cornerRadius">@dimen/radius_button</item>
+        <item name="strokeColor">?attr/colorOutline</item>
+        <item name="android:textAppearance">@style/TextAppearance.Malunggay.Button</item>
+    </style>
+
+    <style name="Widget.Malunggay.Card" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardBackgroundColor">?attr/colorSurface</item>
+        <item name="cardCornerRadius">@dimen/radius_card</item>
+        <item name="cardElevation">@dimen/card_elevation</item>
+        <item name="strokeWidth">0dp</item>
+    </style>
+
+    <style name="Widget.Malunggay.CircularProgress" parent="Widget.Material3.CircularProgressIndicator.Small">
+        <item name="indicatorColor">?attr/colorPrimary</item>
+        <item name="trackThickness">3dp</item>
+    </style>
+
+    <!--
+        Flat, icon-only bottom navigation. The active tab shows a filled emerald icon
+        (no highlight); inactive tabs show muted outline icons. Tab titles are still used
+        for accessibility (TalkBack) and long-press tooltips.
+    -->
+    <style name="Widget.Malunggay.BottomNavigation" parent="Widget.Material3.BottomNavigationView">
+        <item name="backgroundTint">?attr/colorSurface</item>
+        <item name="elevation">0dp</item>
+        <item name="android:minHeight">64dp</item>
+        <item name="itemIconTint">@color/bottom_nav_icon</item>
+        <item name="itemTextColor">@color/bottom_nav_label</item>
+        <item name="itemIconSize">24dp</item>
+        <item name="itemRippleColor">@android:color/transparent</item>
+        <item name="labelVisibilityMode">unlabeled</item>
+        <item name="itemActiveIndicatorStyle">@style/Widget.Malunggay.BottomNavigation.Indicator</item>
+        <item name="itemTextAppearanceActive">@style/TextAppearance.Malunggay.NavLabel.Active</item>
+        <item name="itemTextAppearanceInactive">@style/TextAppearance.Malunggay.NavLabel</item>
+    </style>
+
+    <!-- No highlight behind the active icon; the filled icon marks the active tab. -->
+    <style name="Widget.Malunggay.BottomNavigation.Indicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@android:color/transparent</item>
+    </style>
+
+    <!--
+        Section card: a white rounded block with a hairline border on the light grey page.
+        Every screen groups its content (forms, lists, charts) in these, so all screens share
+        one structure. Margins are part of the style, so XML stays short.
+    -->
+    <style name="Malunggay.SectionCard" parent="">
+        <item name="android:background">@drawable/bg_section_card</item>
+        <item name="android:layout_marginStart">@dimen/screen_padding</item>
+        <item name="android:layout_marginEnd">@dimen/screen_padding</item>
+    </style>
+
+    <!-- Card that holds a form: inner padding for inputs. -->
+    <style name="Malunggay.SectionCard.Padded">
+        <item name="android:padding">@dimen/space_lg</item>
+    </style>
+
+    <!-- Card that holds a list: vertical padding only; rows bring their own side padding. -->
+    <style name="Malunggay.SectionCard.List">
+        <item name="android:paddingTop">@dimen/space_xs</item>
+        <item name="android:paddingBottom">@dimen/space_xs</item>
+    </style>
+
+    <!-- Uppercase section label above a card. -->
+    <style name="Malunggay.SectionLabel" parent="">
+        <item name="android:textAppearance">@style/TextAppearance.Malunggay.Label</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:layout_marginStart">@dimen/space_xl</item>
+        <item name="android:layout_marginEnd">@dimen/space_xl</item>
+        <item name="android:layout_marginTop">@dimen/space_xl</item>
+        <item name="android:layout_marginBottom">@dimen/space_sm</item>
+    </style>
+
+    <!-- ===== Typography ===== -->
+
+    <!-- Title of a sub-screen (next to the back arrow): same weight as tab titles, smaller. -->
+    <style name="TextAppearance.Malunggay.PageTitle" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textFontWeight">700</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.Malunggay.NavLabel" parent="TextAppearance.Material3.LabelMedium" />
+
+    <style name="TextAppearance.Malunggay.NavLabel.Active">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textFontWeight">600</item>
+    </style>
+
+    <style name="TextAppearance.Malunggay.Display" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">-0.01</item>
+    </style>
+
+    <style name="TextAppearance.Malunggay.Title" parent="TextAppearance.Material3.TitleLarge">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textFontWeight">600</item>
+        <item name="android:textColor">?attr/colorOnSurface</item>
+    </style>
+
+    <style name="TextAppearance.Malunggay.Body" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textColor">?attr/colorOnSurfaceVariant</item>
+        <item name="android:lineSpacingMultiplier">1.15</item>
+    </style>
+
+    <style name="TextAppearance.Malunggay.Label" parent="TextAppearance.Material3.LabelMedium">
+        <item name="android:textColor">?attr/colorOnSurfaceVariant</item>
+    </style>
+
+    <style name="TextAppearance.Malunggay.Button" parent="TextAppearance.Material3.LabelLarge">
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:textSize">16sp</item>
     </style>
 </resources>

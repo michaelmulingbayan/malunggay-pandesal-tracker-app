@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Minimal rounded line icon: home (outline). Filled twin: ic_nav_home_filled. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <path
+        android:pathData="M12,3.5L3.5,10.2V19a1.5,1.5 0,0 0,1.5 1.5H9.5V15.5a2.5,2.5 0,0 1,5 0v5H19a1.5,1.5 0,0 0,1.5 -1.5V10.2Z"
+        android:strokeWidth="1.8"
+        android:strokeColor="@android:color/white"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+</vector>

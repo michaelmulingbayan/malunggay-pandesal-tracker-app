@@ -1,16 +1,53 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Theme.MalunggayTrackerApp" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
-        <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_200</item>
-        <item name="colorPrimaryVariant">@color/purple_700</item>
-        <item name="colorOnPrimary">@color/black</item>
-        <!-- Secondary brand color. -->
-        <item name="colorSecondary">@color/teal_200</item>
-        <item name="colorSecondaryVariant">@color/teal_200</item>
-        <item name="colorOnSecondary">@color/black</item>
-        <!-- Status bar color. -->
-        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
-        <!-- Customize your theme here. -->
+
+    <!--
+        Malunggay design system — dark theme.
+        Only color roles change; component styles are inherited from values/themes.xml.
+    -->
+    <style name="Base.Theme.MalunggayTrackerApp" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Brand -->
+        <item name="colorPrimary">@color/emerald_400</item>
+        <item name="colorOnPrimary">@color/emerald_950</item>
+        <item name="colorPrimaryContainer">@color/emerald_800</item>
+        <item name="colorOnPrimaryContainer">@color/emerald_100</item>
+        <item name="colorSecondary">@color/emerald_300</item>
+        <item name="colorOnSecondary">@color/emerald_950</item>
+        <item name="colorSecondaryContainer">@color/emerald_900</item>
+        <item name="colorOnSecondaryContainer">@color/emerald_100</item>
+        <item name="colorTertiary">@color/emerald_200</item>
+        <item name="colorOnTertiary">@color/emerald_950</item>
+
+        <!-- Surfaces -->
+        <item name="android:colorBackground">@color/neutral_950</item>
+        <item name="colorOnBackground">@color/neutral_100</item>
+        <item name="colorSurface">@color/neutral_900</item>
+        <item name="colorOnSurface">@color/neutral_100</item>
+        <item name="colorSurfaceVariant">@color/neutral_800</item>
+        <item name="colorOnSurfaceVariant">@color/neutral_300</item>
+        <item name="colorSurfaceContainerLowest">@color/neutral_950</item>
+        <item name="colorSurfaceContainerLow">@color/neutral_900</item>
+        <item name="colorSurfaceContainer">@color/neutral_850</item>
+        <item name="colorSurfaceContainerHigh">@color/neutral_800</item>
+        <item name="colorSurfaceContainerHighest">@color/neutral_700</item>
+        <item name="colorOutline">@color/neutral_700</item>
+        <item name="colorOutlineVariant">@color/neutral_800</item>
+
+        <!-- Feedback -->
+        <item name="colorError">@color/red_300</item>
+        <item name="colorOnError">@color/red_950</item>
+        <item name="colorErrorContainer">@color/red_950</item>
+        <item name="colorOnErrorContainer">@color/red_100</item>
+
+        <item name="elevationOverlayEnabled">false</item>
+
+        <!-- Component defaults -->
+        <item name="textInputStyle">@style/Widget.Malunggay.TextInputLayout</item>
+        <item name="materialButtonStyle">@style/Widget.Malunggay.Button</item>
+        <item name="materialCardViewStyle">@style/Widget.Malunggay.Card</item>
+        <item name="circularProgressIndicatorStyle">@style/Widget.Malunggay.CircularProgress</item>
+        <item name="bottomNavigationStyle">@style/Widget.Malunggay.BottomNavigation</item>
+
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
     </style>
 </resources>

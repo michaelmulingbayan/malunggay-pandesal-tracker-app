@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Charts (dark mode): own steps so all three stay distinct on the dark surface. -->
+    <color name="chart_produced">@color/emerald_900</color>
+    <color name="chart_sold">@color/emerald_300</color>
+    <color name="chart_returned">@color/emerald_600</color>
+    <color name="chart_bar">#FF3F6352</color>
+    <color name="chart_bar_current">@color/emerald_300</color>
+
+    <!-- Brand header gradient (dark mode): deeper so it doesn't glare at night. -->
+    <color name="brand_header_start">@color/emerald_800</color>
+    <color name="brand_header_end">@color/emerald_950</color>
+</resources>

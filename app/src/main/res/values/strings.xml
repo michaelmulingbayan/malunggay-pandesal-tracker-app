@@ -1,3 +1,438 @@
 <resources>
     <string name="app_name">Malunggay Tracker App</string>
+
+    <!-- Brand -->
+    <string name="brand_name">Malunggay Tracker</string>
+    <string name="brand_tagline">Pandesal production &amp; delivery, in one place</string>
+
+    <!-- Login -->
+    <string name="login_title">Welcome back</string>
+    <string name="login_subtitle">Sign in with your account to continue.</string>
+    <string name="login_email">Email address</string>
+    <string name="login_password">Password</string>
+    <string name="login_button">Sign in</string>
+    <string name="login_signing_in">Signing in…</string>
+    <string name="login_help">Having trouble signing in? Contact your administrator.</string>
+    <string name="login_version">Version %1$s</string>
+    <string name="error_email_required">Enter your email address</string>
+    <string name="error_email_invalid">Enter a valid email address</string>
+    <string name="error_password_required">Enter your password</string>
+    <string name="error_network">Can\'t reach the server. Check your connection and try again.</string>
+    <string name="error_too_many_attempts">Too many sign-in attempts. Please wait a minute and try again.</string>
+    <string name="error_unexpected">Something went wrong. Please try again.</string>
+
+    <!-- Home -->
+    <string name="home_welcome">Welcome, %1$s</string>
+    <string name="home_logout">Log out</string>
+    <string name="home_logging_out">Logging out…</string>
+    <string name="home_session_expired">Your session has expired. Please sign in again.</string>
+    <string name="home_retry">Try again</string>
+
+    <!-- Admin bottom navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_stock">Stock</string>
+    <string name="nav_riders">Riders</string>
+    <string name="nav_sales">Sales</string>
+    <string name="nav_reports">Reports</string>
+
+    <!-- Reports -->
+    <string name="reports_title">Reports</string>
+    <string name="reports_daily">Daily</string>
+    <string name="reports_weekly">Weekly</string>
+    <string name="reports_monthly">Monthly</string>
+    <string name="reports_pieces_sold">Pieces sold</string>
+    <string name="reports_last_7_days">Last 7 days</string>
+    <string name="reports_last_8_weeks">Last 8 weeks</string>
+    <string name="reports_last_6_months">Last 6 months</string>    <string name="reports_total">%1$s pcs · %2$s</string>
+    <string name="reports_chart_description">Pieces sold: %1$s</string>
+    <string name="reports_chart_point">%1$s %2$s</string>
+    <string name="reports_production">Production report</string>
+    <string name="reports_sales">Sales report</string>
+    <string name="reports_inventory">Inventory report</string>
+    <string name="reports_distribution">Stock distribution report</string>
+    <string name="reports_rider_performance">Rider performance report</string>
+
+    <!-- Report screens -->
+    <string name="report_previous">Previous period</string>
+    <string name="report_next">Next period</string>
+    <string name="report_this_week">This week</string>
+    <string name="report_this_month">This month</string>
+    <string name="report_back_to_now">Tap to go back to now</string>
+    <string name="report_empty_title">Nothing recorded</string>
+    <string name="report_empty_day">There is no activity on this day. Use ◀ to look at an earlier day.</string>
+    <string name="report_empty_week">There is no activity in this week. Use ◀ to look at an earlier week.</string>
+    <string name="report_empty_month">There is no activity in this month. Use ◀ to look at an earlier month.</string>
+    <string name="report_section_empty">Nothing to show</string>
+    <string name="report_chart_hint">Tap a bar to see its number</string>
+    <string name="report_chart_description">%1$s: %2$s</string>
+    <string name="report_percent_of">%1$d%% of total</string>
+    <string name="report_share">%1$d%% of sales</string>
+    <string name="report_by">by %1$s</string>
+    <string name="report_left">%1$s left</string>
+    <string name="report_rank">%1$d. %2$s</string>
+    <string name="report_of_assigned">of %1$s assigned</string>
+    <string name="report_returned_count">%1$s returned</string>
+
+    <string name="report_produced">Produced</string>
+    <string name="report_batches">Batches</string>
+    <string name="report_average_per_baking_day">Average per baking day</string>
+    <string name="report_distributed">Distributed</string>
+    <string name="report_distributed_lower">distributed</string>
+    <string name="report_not_distributed">Not distributed</string>
+    <string name="report_not_distributed_hint">Stayed at the bakery</string>
+    <string name="report_total_sales">Total sales</string>
+    <string name="report_pieces_sold">Pieces sold</string>
+    <string name="report_sales_recorded">Sales recorded</string>
+    <string name="report_average_price">Average price</string>
+    <string name="report_per_piece">per piece</string>
+    <string name="report_riders_selling">Riders who sold</string>
+    <string name="report_sold">Sold</string>
+    <string name="report_sold_lower">sold</string>
+    <string name="report_returned">Returned</string>
+    <string name="report_with_riders">Still with riders</string>
+    <string name="report_with_riders_hint">Not sold or returned yet</string>
+    <string name="report_sell_through">Sell-through</string>
+    <string name="report_sell_through_hint">Sold out of what was given to riders</string>
+    <string name="report_assignments">Assignments</string>
+    <string name="report_riders">Riders</string>
+    <string name="report_top_rider">Top rider</string>
+
+    <string name="report_chart_produced">Produced per day</string>
+    <string name="report_chart_sold">Pieces sold per day</string>
+    <string name="report_chart_distributed">Distributed per day</string>
+
+    <string name="report_section_batches">Batches</string>
+    <string name="report_section_by_rider">By rider</string>
+    <string name="report_section_by_day">By day</string>
+    <string name="report_section_returns">Returns</string>
+    <string name="report_section_assignments">Assignments</string>
+    <string name="report_section_ranking">Ranking (by sales)</string>
+
+    <string name="report_rider_sales_detail">%1$s · %2$s</string>
+    <string name="report_inventory_day_detail">Produced %1$s · Out %2$s · Returned %3$s</string>
+    <string name="report_flow_detail">%1$s · sold %2$s · returned %3$s</string>
+    <string name="report_assignment_detail">%1$s · sold %2$s · returned %3$s</string>
+    <string name="report_rider_performance_detail">Sold %1$s of %2$s (%3$d%%) · %4$s · ~%5$s a day</string>
+    <string name="report_returns_verified_hint">Checked by the admin</string>
+    <string name="report_returns_pending_hint">Waiting to be checked</string>
+    <string name="report_returns_rejected_hint">Not counted as returned</string>
+
+    <plurals name="report_baking_days">
+        <item quantity="one">%d baking day</item>
+        <item quantity="other">%d baking days</item>
+    </plurals>
+    <plurals name="report_sales_count">
+        <item quantity="one">%d sale</item>
+        <item quantity="other">%d sales</item>
+    </plurals>
+    <plurals name="report_assignments_count">
+        <item quantity="one">%d assignment</item>
+        <item quantity="other">%d assignments</item>
+    </plurals>
+    <plurals name="report_days_active">
+        <item quantity="one">%d day</item>
+        <item quantity="other">%d days</item>
+    </plurals>
+
+    <!-- Section screens -->
+    <string name="section_stock_subtitle">Production &amp; inventory</string>
+    <string name="section_stock_empty">Production batches, distributions, returns and inventory adjustments will appear here.</string>
+    <string name="section_riders_subtitle">Your delivery team</string>
+    <string name="section_riders_empty">Riders, their availability and live locations will appear here.</string>
+    <string name="section_sales_subtitle">Daily sales from riders</string>
+    <string name="section_sales_empty">Sales recorded by riders, with totals per day, will appear here.</string>
+    <string name="section_coming_soon">Coming soon</string>
+
+    <!-- Riders list -->
+    <string name="riders_add">Add rider</string>
+    <string name="riders_empty_title">No riders yet</string>
+    <string name="riders_empty_body">Tap + to add your first rider.</string>
+    <string name="riders_toggle_description">%1$s account active</string>
+    <string name="riders_activated">%1$s can now sign in</string>
+    <string name="riders_deactivated">%1$s was deactivated and signed out</string>
+    <string name="riders_added">Rider added</string>
+    <string name="riders_count">%1$d active of %2$d</string>
+
+    <!-- Add rider -->
+    <string name="add_rider_title">Add rider</string>
+    <string name="add_rider_subtitle">Create a sign-in account for your rider</string>
+    <string name="add_rider_section_account">Account</string>
+    <string name="add_rider_section_contact">Contact</string>
+    <string name="add_rider_name">Full name</string>
+    <string name="add_rider_email">Email address</string>
+    <string name="add_rider_password">Temporary password</string>
+    <string name="add_rider_password_helper">At least 8 characters. Share it with the rider so they can sign in.</string>
+    <string name="add_rider_phone">Mobile number</string>
+    <string name="add_rider_address">Address</string>
+    <string name="add_rider_save">Save rider</string>
+    <string name="add_rider_saving">Saving…</string>
+    <string name="back">Back</string>
+    <string name="error_name_required">Enter the rider\'s name</string>
+    <string name="error_password_min">Use at least 8 characters</string>
+    <string name="error_phone_required">Enter a mobile number</string>
+    <string name="error_address_required">Enter an address</string>
+    <string name="error_forbidden">You don\'t have permission to do that.</string>
+    <string name="error_too_many_requests">Too many requests. Please wait a moment and try again.</string>
+
+    <!-- Admin dashboard -->
+    <string name="dashboard_today">Today</string>
+    <string name="dashboard_sales_label">Total sales today</string>
+    <string name="dashboard_pieces_sold">%1$s pcs sold</string>
+    <string name="dashboard_produced">Produced</string>
+    <string name="dashboard_available">Available</string>
+    <string name="dashboard_distributed">Distributed</string>
+    <string name="dashboard_active_riders">Active riders</string>
+    <string name="dashboard_actions">Actions</string>
+    <string name="dashboard_map_title">Rider locations</string>
+    <string name="dashboard_map_placeholder">Map preview coming soon</string>
+    <string name="dashboard_map_body">Live rider locations will show here.</string>
+    <string name="map_empty_title">No rider locations yet</string>
+    <string name="map_empty_body">Riders appear here when they turn on \"Share my location\".</string>
+    <plurals name="map_riders_count">
+        <item quantity="one">%d rider on the map</item>
+        <item quantity="other">%d riders on the map</item>
+    </plurals>
+    <string name="map_refreshed">Updated %1$s · refreshes every 30 s</string>
+    <string name="map_legend_available">Available</string>
+    <string name="map_legend_unavailable">Unavailable</string>
+    <string name="map_marker_snippet">%1$s · last seen %2$s</string>
+    <string name="map_recenter">Show all riders</string>
+    <string name="map_attribution">© OpenStreetMap contributors</string>
+    <string name="map_zoom_in">Zoom in</string>
+    <string name="map_zoom_out">Zoom out</string>
+    <string name="map_zoom_hint">Pinch with two fingers or use + / − to zoom</string>
+    <string name="greeting_morning">Good morning,</string>
+    <string name="greeting_afternoon">Good afternoon,</string>
+    <string name="greeting_evening">Good evening,</string>
+    <string name="dashboard_record_body">Log today\'s batch</string>
+    <string name="dashboard_distribute_body">Assign to riders</string>
+    <string name="dashboard_of_produced">%1$d%% of produced</string>
+
+    <!-- Home quick actions -->
+    <string name="home_quick_actions">Quick actions</string>
+    <string name="home_record_production">Record production</string>
+    <string name="home_record_production_body">Log today\'s pandesal output</string>
+
+    <!-- Dates -->
+    <string name="date_today">Today</string>
+    <string name="date_yesterday">Yesterday</string>
+    <plurals name="date_days_ago">
+        <item quantity="one">%d day ago</item>
+        <item quantity="other">%d days ago</item>
+    </plurals>
+
+    <!-- Production -->
+    <string name="production_title">Production</string>
+    <string name="production_section_today">Today\'s production</string>
+    <string name="production_today_summary">%1$s pcs recorded today</string>
+    <plurals name="production_batches">
+        <item quantity="one">%d batch</item>
+        <item quantity="other">%d batches</item>
+    </plurals>
+    <string name="production_quantity">Pieces produced</string>
+    <string name="production_pcs">pcs</string>
+    <string name="production_remarks">Remarks (optional)</string>
+    <string name="production_remarks_helper">e.g. Morning batch, oven issue, extra order</string>
+    <string name="production_save">Record production</string>
+    <string name="production_saving">Recording…</string>
+    <string name="production_saved">Recorded %1$s pcs for today</string>
+    <string name="production_section_history">History</string>
+    <string name="production_history_empty">No production recorded yet.</string>
+    <string name="production_recorded_by">%1$s · by %2$s</string>
+    <string name="production_item_description">%1$s, %2$s pieces</string>
+    <string name="error_quantity_required">Enter how many pieces were produced</string>
+    <string name="error_quantity_invalid">Enter a whole number greater than 0</string>
+
+    <!-- Distribute stock -->
+    <string name="home_distribute_stock">Distribute stock</string>
+    <string name="home_distribute_stock_body">Assign today\'s pandesal to riders</string>
+    <string name="distribute_title">Distribute stock</string>
+    <string name="distribute_available_label">Available to distribute</string>
+    <string name="distribute_available_value">%1$s pcs</string>
+    <string name="distribute_available_detail">%1$s produced · %2$s assigned</string>
+    <string name="distribute_none_produced">No production recorded today yet</string>
+    <string name="distribute_section_assign">Assign to rider</string>
+    <string name="distribute_rider">Rider</string>
+    <string name="distribute_no_riders">No active riders. Add or activate one in Riders.</string>
+    <string name="distribute_quantity">Quantity</string>
+    <string name="distribute_assign">Assign stock</string>
+    <string name="distribute_assigning">Assigning…</string>
+    <string name="distribute_assigned">Assigned %1$s pcs to %2$s</string>
+    <string name="distribute_section_today">Assigned today</string>
+    <string name="distribute_today_empty">Nothing assigned yet today.</string>
+    <plurals name="distribute_assignment_count">
+        <item quantity="one">%d assignment</item>
+        <item quantity="other">%d assignments</item>
+    </plurals>
+    <string name="distribute_row_detail">%1$s · last at %2$s</string>
+    <string name="distribute_row_description">%1$s, %2$s pieces</string>
+    <string name="error_rider_required">Choose a rider</string>
+    <string name="error_quantity_exceeds">Only %1$s pcs are available</string>
+    <string name="error_nothing_available">Nothing left to distribute. Record production first.</string>
+
+    <!-- Inventory -->
+    <string name="inventory_title">Inventory</string>
+    <string name="inventory_section_today">Today\'s stock flow</string>
+    <string name="inventory_bar_produced">Produced</string>
+    <string name="inventory_bar_distributed">Distributed</string>
+    <string name="inventory_bar_returned">Returned</string>
+    <string name="inventory_pcs">%1$s pcs</string>
+    <string name="inventory_note_undistributed">%1$s pcs not yet distributed</string>
+    <string name="inventory_produced_label">pcs produced today</string>
+    <string name="inventory_percent_sold">%1$d%% sold</string>
+    <string name="inventory_percent">%1$d%%</string>
+    <string name="inventory_legend_produced">Production</string>
+    <string name="inventory_legend_sold">Sold</string>
+    <string name="inventory_legend_returned">Returned</string>
+    <string name="inventory_flow_description">%1$s pieces produced, %2$s sold, %3$s returned.</string>
+    <string name="inventory_note_pending">%1$s pcs waiting for verification</string>
+    <string name="inventory_note_all_clear">All returns verified</string>
+    <string name="inventory_section_returns">Returned stock</string>
+    <string name="inventory_returns_empty">No returns yet. Returns from riders will appear here for you to verify.</string>
+    <string name="inventory_return_detail">%1$s of %2$s pcs · %3$s</string>
+    <string name="inventory_verify">Verify</string>
+    <string name="inventory_verified">Verified</string>
+    <string name="inventory_rejected">Rejected</string>
+    <string name="inventory_verify_title">Verify return?</string>
+    <string name="inventory_verify_message">Confirm you received %1$s pcs back from %2$s.</string>
+    <string name="inventory_verify_done">Verified %1$s pcs from %2$s</string>
+    <string name="inventory_return_description">%1$s returned %2$s pieces, %3$s</string>
+    <string name="cancel">Cancel</string>
+
+    <!-- Sales -->
+    <string name="sales_title">Sales</string>
+    <string name="sales_total_label">Total sales today</string>
+    <string name="sales_pieces_label">Pieces sold</string>
+    <string name="sales_riders_label">Riders</string>
+    <string name="sales_section_riders">Sales per rider</string>
+    <string name="sales_empty">No sales recorded today yet. Sales from riders will appear here.</string>
+    <string name="sales_rider_detail">%1$s pcs · %2$s</string>
+    <plurals name="sales_count">
+        <item quantity="one">%d sale</item>
+        <item quantity="other">%d sales</item>
+    </plurals>
+    <string name="sales_rider_description">%1$s sold %2$s pieces for %3$s</string>
+    <string name="sales_share">%1$d%% of total</string>
+
+    <!-- Rider navigation -->
+    <string name="nav_sell">Sell</string>
+    <string name="nav_my_stock">Stock</string>
+
+    <!-- Rider home -->
+    <string name="rider_sales_label">My sales today</string>
+    <string name="rider_assigned">Assigned</string>
+    <string name="rider_sold">Sold</string>
+    <string name="rider_returned">Returned</string>
+    <string name="rider_remaining">Remaining</string>
+    <string name="rider_action_sell">Sell</string>
+    <string name="rider_action_sell_body">Record a sale</string>
+    <string name="rider_action_return">Return stock</string>
+    <string name="rider_action_return_body">Give back unsold</string>
+    <string name="rider_no_stock_today">No stock assigned to you yet today.</string>
+    <string name="rider_error_no_stock">You have no stock left today</string>
+    <string name="rider_error_too_many">You only have %1$s pcs left</string>
+
+    <!-- Rider home: availability, stock, location -->
+    <string name="rider_hi">Hi, %1$s</string>
+    <string name="rider_available">You are available</string>
+    <string name="rider_unavailable">You are unavailable</string>
+    <string name="rider_available_body">The admin can assign you stock</string>
+    <string name="rider_unavailable_body">You won\'t be assigned new stock</string>
+    <string name="rider_location_value">%1$s, %2$s</string>
+    <string name="rider_location_updated">Updated %1$s</string>
+    <string name="rider_location_waiting">Getting your location…</string>
+    <string name="rider_location_off">Location sharing is off</string>
+    <string name="rider_location_none">No location shared yet</string>
+    <string name="rider_live">Live</string>
+    <string name="rider_remaining_label">Remaining stock</string>
+    <string name="rider_remaining_value">%1$s pcs</string>
+    <string name="rider_remaining_of">of %1$s assigned</string>
+    <string name="rider_remaining_detail">%1$s sold · %2$s returned · %3$d%% left</string>
+    <string name="rider_sales">Sales</string>
+    <string name="rider_share_title">Share my location</string>
+    <string name="rider_share_body">The admin and customers can see where you are while this app is open.</string>
+
+    <!-- Time ago -->
+    <string name="ago_just_now">just now</string>
+    <string name="ago_minutes">%1$d min ago</string>
+    <string name="ago_hours">%1$d h ago</string>
+
+    <!-- Customer: find a rider -->
+    <string name="customer_find_rider">Find a rider near you</string>
+    <string name="customer_title">Riders near you</string>
+    <string name="customer_subtitle">Updated %1$s</string>
+    <string name="customer_section_list">Nearest first</string>
+    <string name="customer_distance">~%1$s</string>
+    <string name="customer_distance_away">%1$s away</string>
+    <string name="customer_seen">seen %1$s</string>
+    <string name="customer_no_distance">Turn on location to see distance</string>
+    <string name="customer_empty_title">No riders on the road right now</string>
+    <string name="customer_empty_body">Riders appear here when they are available and sharing their location.</string>
+    <string name="customer_location_title">See how far riders are</string>
+    <string name="customer_location_body">Allow location so we can measure the distance. Your location stays on your phone.</string>
+    <string name="customer_location_allow">Allow</string>
+    <string name="customer_my_location">My location</string>
+    <string name="customer_you">You are here</string>
+    <string name="customer_your_location">Your location</string>
+    <string name="customer_locating">Finding your location…</string>
+    <string name="customer_accuracy">±%1$d m</string>
+    <string name="customer_row_description">%1$s, %2$s</string>
+    <string name="location_permission_needed">Allow location access to share your location.</string>
+    <string name="location_turned_off">Turn on your phone\'s location to share it.</string>
+
+    <!-- Sell -->
+    <string name="sell_title">Sell</string>
+    <string name="sell_price_label">Price per piece</string>
+    <string name="sell_left_label">Pieces left</string>
+    <string name="sell_quantity">Pieces sold</string>
+    <string name="sell_all">All</string>
+    <string name="sell_total">Total %1$s</string>
+    <string name="sell_button">Record sale</string>
+    <string name="sell_recording">Recording…</string>
+    <string name="sell_done">Sold %1$s pcs · %2$s</string>
+    <string name="sell_error_no_price">No price set yet. Ask the admin to set the price.</string>
+    <string name="sell_section_today">Today\'s sales</string>
+    <string name="sell_empty_title">No sales yet today</string>
+    <string name="sell_empty_body">Sales you record above will show up here.</string>
+    <string name="sell_row_title">%1$s pcs × %2$s</string>
+
+    <!-- My stock -->
+    <string name="my_stock_title">My stock</string>
+    <string name="my_stock_assigned_label">pcs assigned today</string>
+    <string name="my_stock_section_return">Return unsold stock</string>
+    <string name="my_stock_return_helper">At the end of your duty, return everything you have left. The admin will verify it.</string>
+    <string name="my_stock_return_left">%1$s pcs left</string>
+    <string name="my_stock_return_nothing">Nothing left to return</string>
+    <string name="my_stock_return_nothing_hint">You have sold or returned all of today\'s stock.</string>
+    <string name="my_stock_return_button">Return stock</string>
+    <string name="my_stock_return_all_button">Return %1$s pcs</string>
+    <string name="my_stock_return_confirm_title">Return %1$s pcs?</string>
+    <string name="my_stock_return_confirm_message">All your remaining pandesal will be sent back for the admin to verify. You can\'t sell them after this.</string>
+    <string name="my_stock_return_confirm">Return</string>
+    <string name="my_stock_returning">Returning…</string>
+    <string name="return_done">Returned %1$s pcs · waiting for verification</string>
+    <string name="my_stock_section_returns">My returns</string>
+    <string name="my_stock_returns_empty_title">No returns yet today</string>
+    <string name="my_stock_returns_empty_body">When your duty ends, return what is left above.</string>
+    <string name="return_status_pending">Pending</string>
+    <string name="my_stock_return_row">%1$s pcs</string>
+
+    <!-- Price per piece -->
+    <string name="price_label">Price per piece</string>
+    <string name="price_value">%1$s / pc</string>
+    <string name="price_not_set">Not set</string>
+    <string name="price_not_set_detail">Set a price so riders can record sales</string>
+    <string name="price_set_detail">Set by %1$s · %2$s</string>
+    <string name="price_change">Change</string>
+    <string name="price_set">Set price</string>
+    <string name="price_dialog_title">Price per piece</string>
+    <string name="price_dialog_hint">Price</string>
+    <string name="price_dialog_helper">Applies to new sales. Past sales keep their price.</string>
+    <string name="price_currency_prefix">₱</string>
+    <string name="price_per_pc_suffix">/ pc</string>
+    <string name="price_save">Save</string>
+    <string name="price_saved">Price set to %1$s per piece</string>
+    <string name="price_error_required">Enter a price</string>
+    <string name="price_error_invalid">Enter a price greater than ₱0</string>
+    <string name="price_error_decimals">Use at most 2 decimals, e.g. 3.50</string>
 </resources>
